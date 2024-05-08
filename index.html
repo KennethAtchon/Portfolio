@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+    <title>Portfolio</title>
+    <style>
+
+        body {
+            overflow: hidden;
+            }
+
+
+        nav {
+            padding-left: 4rem; 
+            padding-right: 2rem; 
+        }
+
+        
+        .containercard {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            height: 90vh; /* Set the height of the container */
+            overflow: hidden;
+            margin-left: 200px; 
+            margin-right: 100px; 
+        }
+
+
+        .content {
+            overflow-y: auto; /* Enable vertical scrolling for the content */
+            overflow: hidden; /* Hide horizontal overflow */
+            padding: 1rem; /* Add padding for content */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex; /* Use flexbox for article positioning */
+            flex-wrap: wrap; /* Allow articles to wrap */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        article {
+            width: 100%;
+            height: 100%; /* Set each article to take up 100% viewport height */
+        }
+
+
+        .vertical-slider-container {
+        display: flex;
+        justify-content: space-between; /* Evenly space the buttons */
+        align-items: center; /* Center align the buttons vertically */
+        position: absolute;
+        width: 80vh;
+        top: 50%;
+        left: 0;
+        transform: translateX(-47%) translateY(-100%) rotate(-90deg);
+        margin: 75px;
+        }
+
+        .vertical-slider-container button,
+        .vertical-slider-container .smaller-div {
+            width: 15px; /* Set the width and height for smaller divs */
+            height: 15px;
+            background-color: #555; /* Adjust color as needed */
+            border-radius: 50%; /* Make them circular */
+        }
+
+
+        .vertical-slider-container button {
+            width: 60px; /* Set the width and height to create a circular button */
+            height: 60px;
+            border-radius: 50%; /* Make the button circular */
+            margin: 10px; /* Adjust margin for spacing */
+            background-color: #333; /* Set a background color */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add cursor pointer on hover */
+            position: relative; /* Position relative for absolute positioning of pseudo-elements */
+            z-index: 1;
+        }
+
+        .vertical-slider-container .active {
+        width: 60px;
+        height: 150px;
+        border-radius: 37.5px;
+        background-color: #cebfbf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+        outline: none;
+        color: #000000d3;
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 1;
+        position: relative;
+        font-family: Calibri; /* Better font style */
+        overflow: hidden; /* Hide overflow to contain rotated text */
+    }
+
+    .vertical-slider-container .active::after {
+        content: attr(data-content);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg); /* Rotate the text */ 
+    }
+
+        .vertical-slider-container .active:hover {
+            background-color: #33fff8; /* Lighter shade of red on hover */
+        }
+
+        .vertical-slider-container button:hover {
+            background-color: #33fff8; /* Lighter shade of red on hover */
+        }
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li style="font-size: 24px;" ><strong>Atchon</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <div class="vertical-slider-container">
+        <button id="contactBtn"></button>
+        <div class="smaller-div" id="smaller-div9"></div>
+        <div class="smaller-div" id="smaller-div8"></div>
+        <div class="smaller-div" id="smaller-div7"></div>
+        <button id="experienceBtn"></button>
+        <div class="smaller-div" id="smaller-div6"></div>
+        <div class="smaller-div" id="smaller-div5"></div>
+        <div class="smaller-div" id="smaller-div4"></div>
+        <button id="aboutBtn"></button>
+        <div class="smaller-div" id="smaller-div3"></div>
+        <div class="smaller-div" id="smaller-div2"></div>
+        <div class="smaller-div" id="smaller-div1"></div>
+        <button id="homeBtn" class="active"></button>
+        </div>
+    <div class="containercard">
+        <div class="content" id="content">
+            <article id="Home" ></article>
+            <article id="About"></article>
+            <article id="Experience"></article>
+            <article id="Contact"></article>
+            
+        </div>
+        
+    </div>
+    
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const activeButton = document.querySelector('.vertical-slider-container .active');
+        activeButton.setAttribute('data-content', 'Home');
+        });
+
+        const content = document.getElementById('content');
+        let isScrolling = false;
+
+
+        // Function to handle the scroll
+        function handleScroll(e) {
+            if (!isScrolling) {
+                isScrolling = true;
+                let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))) * 2;
+                content.scrollTop -= delta * 30;
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 100);
+            }
+        }
+
+        // Event listener for mousewheel and DOMMouseScroll (Firefox)
+        if (content.addEventListener) {
+            content.addEventListener('wheel', handleScroll, { passive: false });
+            content.addEventListener('DOMMouseScroll', handleScroll, { passive: false });
+        } else {
+            content.attachEvent('onmousewheel', handleScroll);
+        }
+
+
+        const homeBtn = document.getElementById('homeBtn');
+        const aboutBtn = document.getElementById('aboutBtn');
+        const experienceBtn = document.getElementById('experienceBtn');
+        const contactBtn = document.getElementById('contactBtn');
+
+        // Function to scroll to the corresponding article
+        function scrollToArticle(articleId) {
+            const article = document.getElementById(articleId);
+            if (article) {
+                article.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Function to handle button clicks and update the pseudo-element content
+        function handleButtonClick(button, articleId, buttonText) {
+            // Remove .active class from all buttons
+            homeBtn.classList.remove('active');
+            aboutBtn.classList.remove('active');
+            experienceBtn.classList.remove('active');
+            contactBtn.classList.remove('active');
+
+            // Add .active class to the clicked button
+            button.classList.add('active');
+
+            // Get the element with the CSS class .vertical-slider-container .active
+            const element = document.querySelector('.vertical-slider-container .active');
+
+            switch (articleId) {
+                case 'Home':
+                    element.setAttribute('data-content', 'Home');
+                    break;
+                case 'About':
+                    element.setAttribute('data-content', 'About');
+                    break;
+                case 'Experience':
+                    element.setAttribute('data-content', 'Experience');
+                    break;
+                case 'Contact':
+                    element.setAttribute('data-content', 'Contact');
+                    break;
+                default:
+                    element.setAttribute('data-content', 'Home'); // Default to Home if none matched
+                    break;
+            }
+
+            // Scroll to the corresponding article
+            scrollToArticle(articleId);
+
+
+        }
+
+        // Event listeners for button clicks
+        homeBtn.addEventListener('click', () => {
+            handleButtonClick(homeBtn, 'Home', 'Home');
+        });
+
+        aboutBtn.addEventListener('click', () => {
+            handleButtonClick(aboutBtn, 'About', 'About Me');
+        });
+
+        experienceBtn.addEventListener('click', () => {
+            handleButtonClick(experienceBtn, 'Experience', 'Experience');
+        });
+
+        contactBtn.addEventListener('click', () => {
+            handleButtonClick(contactBtn, 'Contact', 'Contact Me');
+        });
+
+
+</script>
+</html>

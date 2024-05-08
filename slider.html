@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    height: 1000px; /* Adjust height as needed */
+    overflow-y: scroll;
+    padding: 20px;
+  }
+  .circles {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+  }
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .words {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 100px; /* Adjust margin as needed to avoid overlap */
+  }
+</style>
+</head>
+<body>
+  <div class="container" onscroll="highlightCircles()">
+    <div class="circles">
+      <div class="circle" id="circle1"></div>
+      <div class="circle" id="circle2"></div>
+      <div class="circle" id="circle3"></div>
+      <div class="circle" id="circle4"></div>
+      <div class="circle" id="circle5"></div>
+      <div class="circle" id="circle6"></div>
+    </div>
+    <div class="words">
+      <!-- Add your words here -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo eros eu ante fernec varius tellus eget sapien tincidunt bibendum.</p>
+      <!-- Repeat the above paragraph as needed -->
+    </div>
+  </div>
+  <script>
+    function highlightCircles() {
+      const circles = document.querySelectorAll('.circle');
+      const container = document.querySelector('.container');
+      const scrollPosition = container.scrollTop;
+
+      circles.forEach((circle, index) => {
+        const offset = index * 200; // Adjust the offset for timing
+        if (scrollPosition >= offset && scrollPosition < offset + 200) {
+          circle.style.backgroundColor = '#ff0000'; // Red color when active
+        } else {
+          circle.style.backgroundColor = '#ccc'; // Default color when inactive
+        }
+      });
+    }
+  </script>
+</body>
+</html>
