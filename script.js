@@ -56,7 +56,7 @@ const jsonData = {
     "languages": [
       {
         "language": "Python",
-        "imgUrl": "/logos/python.png",
+        "imgUrl": "logos/python.png",
         "posts": [
           {
             "year": "2024",
@@ -84,7 +84,7 @@ const jsonData = {
       },
       {
         "language": "C++",
-        "imgUrl": "/logos/cplusplus.png",
+        "imgUrl": "logos/cplusplus.png",
         "posts": [
           {
             "year": "2023",
@@ -105,7 +105,7 @@ const jsonData = {
       },
       {
         "language": "Java",
-        "imgUrl": "/logos/java.png",
+        "imgUrl": "logos/java.png",
         "posts": [
           {
             "year": "2023",
@@ -126,7 +126,7 @@ const jsonData = {
       },
       {
         "language": "NodeJS",
-        "imgUrl": "/logos/nodejs.png",
+        "imgUrl": "logos/nodejs.png",
         "posts": [
           {
             "year": "2024",
@@ -150,7 +150,7 @@ const jsonData = {
       },
       {
         "language": "Web Dev",
-        "imgUrl": "/logos/webdev.png",
+        "imgUrl": "logos/webdev.png",
         "posts": [
           {
             "year": "2024",
@@ -163,7 +163,7 @@ const jsonData = {
       },
       {
         "language": "React",
-        "imgUrl": "/logos/react.png",
+        "imgUrl": "logos/react.png",
         "posts": [
           {
             "year": "2024",
