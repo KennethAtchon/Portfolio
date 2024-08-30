@@ -1,0 +1,240 @@
+.m-coding-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.m-skills-items {
+    flex: 0 0 calc(25% - 20px);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    transition: all 1s ease;
+}
+.m-skills-items img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.progress-circle {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress-circle-bg {
+    fill: none;
+    stroke: #f0f0f0;
+    stroke-width: 5;
+}
+
+.dark-mode .progress-circle-bg {
+    stroke: #30343F;
+}
+
+.progress-circle-path {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.skill-percentage {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ED6A5E;
+    z-index: 3;
+    text-align: center;
+}
+
+.plus-sign {
+    position: absolute;
+    top: 5px; /* Adjust this value to position the plus sign */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em; /* Adjust the size of the plus sign */
+    font-weight: bold;
+    color: #ED6A5E; /* Match the color of the skill percentage */
+    z-index: 4;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.plus-sign::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: #ED6A5E;
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+    z-index: -1; /* Place the circle behind the plus sign */
+}
+
+/* Trigger hover effect when the user hovers over the .m-skills-items */
+.m-skills-items:hover .plus-sign::before {
+    width: 1em; /* Size of the circular background on hover */
+    height: 1em; /* Size of the circular background on hover */
+}
+
+.m-skills-items:hover .plus-sign {
+    color: #fff; /* Change the color of the plus sign on hover for contrast */
+}
+
+.hideDontShow{
+    opacity: 0;
+}
+
+.ShowAll {
+    opacity: 1;
+}
+
+.shrink {
+    transform: scale(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.chosen-coding-skill {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 1s ease, width 1s ease, height 1s ease, opacity 1s ease;
+    overflow: hidden;
+    display: none; /* Start with display:none to hide the element */
+}
+
+.chosen-coding-skill.active {
+    display: flex;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transform: scale(1);
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.chosen-coding-skill.deactive {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transform: scale(0);
+}
+
+
+.chosen-coding-items {
+    flex: 0 0 calc(50% - 40px); /* Change from 25% to 50% */
+    aspect-ratio: 2 / 1;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s ease;
+    background-color: white;
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.dark-mode .chosen-coding-items {
+    background-color: #171b22;
+}
+
+.chosen-coding-title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.chosen-coding-bundle {
+    display: flex;
+    align-items: center;
+}
+
+.chosen-image {     
+    margin-left: 24px;
+    margin-right: 8px;
+    height: 50px;
+    width: 50px;
+}
+
+.chosen-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.chosen-name {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.minus-sign {
+    color: #ED6A5E;
+    font-size: 32px;
+    margin-right: 24px;
+    cursor: pointer;
+    position: relative; /* Position the minus sign relative to its container */
+}
+
+.chosen-coding-items:hover .minus-sign {
+    color: #fff; /* Change the color of the minus sign for contrast */
+}
+
+
+
+.chosen-coding-content {
+    width: 100%;
+    padding-left: 16px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bullet-points {
+    padding-right: 16px;
+    margin: 0px;
+}
+
+.FadeInAni {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.FadeInAniNow {
+    opacity: 1;
+}
+
+.cv-download {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits text color from parent */
+    display: inline-block; /* Makes the entire area clickable */
+}
+
+.cv-download:focus,
+.cv-download:active {
+    outline: none; /* Removes focus outline */
+}
+
+.cv-download:hover {
+    /* Add any hover styles if needed */
+}

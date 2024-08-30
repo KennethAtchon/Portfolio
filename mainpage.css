@@ -1,0 +1,417 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.m-section1 {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+
+.m-texts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.m-name {
+    animation: scaleUp 1s ease-in-out;
+}
+
+.m-name p {
+    font-size: 80px;
+    padding: 0;
+    margin: 0;
+
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.m-profile {
+    background-color: blue;
+    flex: 1;
+}
+
+
+.mainwriter li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    animation: typing 2s infinite;
+}
+
+.dark-mode .mainwriter li span::after {
+    background: #30343F;
+}
+
+.m-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.m-btn {
+    position: relative;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.m-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ED6A5E;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    z-index: -1;
+}
+
+.m-button1 {
+    background-color: #C1666B;
+    color: white;
+}
+
+.m-button1::before {
+    transform: scaleY(0);
+}
+
+.m-button1:hover::before {
+    transform: scaleY(1);
+}
+
+.m-button2 {
+    background-color: #95a8ff;
+    color: white;
+}
+
+.m-button2::before {
+    transform: scaleX(0);
+}
+
+.m-button2:hover::before {
+    transform: scaleX(1);
+}
+
+.m-button2 {
+    border-radius: 50px;
+    padding: 20px 32px;
+    font-size: 20px;
+    background-color: #95a8ff;
+    cursor: pointer;
+}
+
+.dark-mode .m-button2 {
+    background-color: #4357AD;
+}
+
+.m-profile {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    background-color: #4563b6;
+    border-radius: 100%;
+}
+
+.moveDownScaleUp {
+    transform: translateY(-120px) scale(0.5);
+    transition: all 1.5s;
+}
+
+.moveDownScaleUpNow {
+    transform: translateY(0) scale(1);
+}
+
+
+.cards .card {
+    position: absolute;
+    padding: 16px 24px;
+    background-color: #ED6A5E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.cards .card:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Position the cards at the corners */
+.cards .top-left {
+    top: 10%;
+    left: 0;
+}
+
+.cards .top-right {
+    top: 0;
+    right: 0;
+}
+
+.cards .bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.cards .bottom-right {
+    bottom: 10%;
+    right: 0;
+}
+
+
+.m-section2 {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.m-section2 p {
+    font-size: 24px;
+    margin: 16px 0px;
+}
+
+.m-projects {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.m-items-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.m-items {
+    padding: 20px;
+    background-color: coral;
+    width: 140px;
+    height: 24px;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.m-section3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
+}
+
+.m-about {
+    display: flex;
+    flex-direction: row;
+}
+
+.m-about p {
+    font-size: 52px;
+    margin: 16px 0px;
+    padding-right: 10px;
+}
+
+.m-line {
+    flex: 1;
+    border-bottom: 2px solid;
+    margin: 28px 0px;
+}
+
+.m-about-content {
+    font-size: 20px;
+    padding-bottom: 24px;
+}  
+
+.m-about-dict {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 10px 20px;
+    width: auto;
+    font-size: 24px;
+
+}
+
+.translateRight {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.translateRightNow {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.m-dict {
+    display: contents;
+}
+
+
+.m-dict-title {
+    color: #412722;
+}
+
+.dark-mode .m-dict-title {
+    color: #AECFDF;
+}
+
+.m-dict p:nth-child(2) {
+    justify-self: center;
+}
+
+
+.autoShow {
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.m-section4 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding-bottom: 48px;
+}
+
+.m-education{
+    flex: 1;
+} 
+
+.m-experience {
+    flex: 1;
+}
+
+.m-items-cv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.m-items-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+    color: #412722;
+}
+
+.m-items-elements:hover{
+    color: black;
+}
+
+.m-items-elements:hover .m-items-elements-title{
+    color: #C1666B;
+}
+
+.dark-mode .m-items-elements:hover {
+    color: white;
+}
+
+.dark-mode .m-items-elements {
+    color: #AECFDF;
+}
+
+.m-items-elements-title{
+    font-size: 24px;
+    color: black;
+}
+
+.dark-mode .m-items-elements-title {
+    color: white;
+}
+
+
+
+.translateLeft {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1.5s;
+}
+
+.translateLeftNow {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.verticalscroll::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .verticalscroll::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 100vw;
+  }
+
+  .dark-mode .verticalscroll::-webkit-scrollbar-track {
+    background: #30343F;
+    border-radius: 100vw;
+  }
+  
+  .verticalscroll::-webkit-scrollbar-thumb {
+    background: #C1666B;
+    border-radius: 100vw;
+  }
+  
+  .verticalscroll::-webkit-scrollbar-thumb:hover {
+    background: #ED6A5E;
+  }
+  

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretching and Expanding Circles</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden; /* Ensures the expanded circle doesn't overflow the container */
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+
+        .left .circle {
+            margin-left: 0;
+        }
+
+        .center .circle {
+            margin: 0 auto;
+        }
+
+        .right .circle {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .circle.stretched {
+            width: 100%;
+            border-radius: 50px;
+        }
+
+        .circle.expanded {
+            height: 240px; /* 3 times the original height */
+        }
+
+        .plus-sign {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container left">
+        <div class="circle" id="circle1">
+            <div class="plus-sign" id="plusSign1">+</div>
+        </div>
+    </div>
+
+    <div class="container center">
+        <div class="circle" id="circle2">
+            <div class="plus-sign" id="plusSign2">+</div>
+        </div>
+    </div>
+
+    <div class="container right">
+        <div class="circle" id="circle3">
+            <div class="plus-sign" id="plusSign3">+</div>
+        </div>
+    </div>
+
+    <script>
+        function stretchAndExpand(circle) {
+            circle.classList.toggle('stretched');
+            setTimeout(() => {
+                if (circle.classList.contains('stretched')) {
+                    circle.classList.toggle('expanded');
+                }
+            }, 500); // Wait for the stretch animation to complete
+        }
+
+        document.getElementById('plusSign1').addEventListener('click', () => {
+            stretchAndExpand(document.getElementById('circle1'));
+        });
+
+        document.getElementById('plusSign2').addEventListener('click', () => {
+            stretchAndExpand(document.getElementById('circle2'));
+        });
+
+        document.getElementById('plusSign3').addEventListener('click', () => {
+            stretchAndExpand(document.getElementById('circle3'));
+        });
+    </script>
+</body>
+</html>
