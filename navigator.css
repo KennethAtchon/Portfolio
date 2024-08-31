@@ -421,7 +421,7 @@ body {
 
 @media (max-width: 450px) {
     .mainpage {
-        width: 100%;
+        width: 400px;
         overflow-x: auto;
     }
 }
