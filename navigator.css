@@ -38,11 +38,15 @@
 }
 
 #navMenuToggle {
-    background-color: #f0f0f0;
+    background-color: rgb(123, 123, 123);
     border: none;
     border-radius: 100%;
     cursor: pointer;
     padding: 10px;
+}
+
+.dark-mode #navMenuToggle {
+    background-color: #ffffff;
 }
 
 body {
@@ -412,6 +416,12 @@ body {
 @media (max-width: 750px) {
     .mainpage {
         width: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .mainpage {
+        width: 430px;
     }
 }
 
