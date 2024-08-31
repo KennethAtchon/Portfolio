@@ -1,6 +1,15 @@
+
 document.getElementById("darkModeToggle").addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    this.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 });
+
+document.getElementById('navMenuToggle').addEventListener('click', function() {
+  const navPage = document.querySelector('.navpage');
+  navPage.classList.toggle('show');
+});
+
+
 
 
 const container = document.querySelector('.m-items-container');

@@ -2,7 +2,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1000;
+    z-index: 4000;
 }
 
 #darkModeToggle {
@@ -25,6 +25,26 @@
     color: white;
 }
 
+.nav-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+#navMenuToggle {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 10px;
+}
+
 body {
     margin: 0;
     display: flex;
@@ -38,18 +58,58 @@ body {
     justify-content: center;
 }
 
-.navpage{
+/* Default: .navpage is hidden */
+.navpage {
     width: 250px;
     height: 100vh;
-    display: flex;
+    display: none; /* Start hidden */
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+    z-index: 2000;
 }
+
+/* Show .navpage when screen width is above 1200px */
+@media (min-width: 1201px) {
+    .navpage {
+        display: flex; /* Show as a sidebar */
+    }
+}
+
+/* #navMenuToggle only visible when screen width is 1200px or below */
+#navMenuToggle {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 1200px) {
+    #navMenuToggle {
+        display: block; /* Show toggle button */
+    }
+
+    .navpage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        display: none; /* Hidden initially, shown on click */
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        z-index: 2000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navpage.show {
+        display: flex; /* Show the navpage when the show class is added */
+    }
+}
+
 
 .dark-mode .navpage {
     background-color: #171b22;
 }
+
 
 .section1 {
     margin-top: 20px;
@@ -341,6 +401,18 @@ body {
     padding-right: 20px;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+@media (max-width: 970px) {
+    .mainpage {
+        width: 700px;
+    }
+}
+
+@media (max-width: 750px) {
+    .mainpage {
+        width: 450px;
+    }
 }
 
 .dark-mode .mainpage {

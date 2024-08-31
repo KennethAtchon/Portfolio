@@ -12,6 +12,20 @@
     position: relative;
     transition: all 1s ease;
 }
+
+@media (max-width: 750px) {
+
+    .m-coding-skills {
+        justify-content: center;
+    }
+
+    .m-skills-items{
+        flex: 0 0 calc(50%);
+    }
+
+}
+
+
 .m-skills-items img {
     width: 60%;
     height: 60%;
@@ -149,6 +163,24 @@
     background-color: white;
     border-radius: 30px;
     padding: 8px;
+}
+
+@media (max-width: 970px) {
+
+    .chosen-coding-items{
+        flex: 0 0 calc(50% - 40px);
+        aspect-ratio: 1 / 1;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .chosen-coding-items{
+        flex: 0 0 calc(100% - 40px);
+        aspect-ratio: 1.75 / 1;
+    }
+
 }
 
 .dark-mode .chosen-coding-items {

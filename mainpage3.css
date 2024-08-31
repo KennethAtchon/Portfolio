@@ -25,6 +25,15 @@
     gap: 12px;
 }
 
+@media (max-width: 750px) {
+
+    .m-services-items{
+        flex: 0 0 calc(50% - 20px);
+    }
+
+}
+
+
 .m-service-profile {
     width: 68px;
     height: 68px;
@@ -78,6 +87,22 @@
     background-color: white;
     flex-direction: row;
     gap: 4px;
+}
+
+@media (max-width: 970px) {
+
+    .m-contact-cards-items{
+        flex: 0 0 calc(100% - 20px);
+        aspect-ratio: 6 / 1;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .m-contact-cards-items{
+        flex: 0 0 calc(100% - 20px);
+        aspect-ratio: 4 / 1;
+    }
 }
 
 .dark-mode .m-contact-cards-items {
