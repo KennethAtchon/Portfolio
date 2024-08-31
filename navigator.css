@@ -419,12 +419,6 @@ body {
     }
 }
 
-@media (max-width: 500px) {
-    .mainpage {
-        width: 430px;
-    }
-}
-
 .dark-mode .mainpage {
     background-color: #30343F;
 }
