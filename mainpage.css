@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 .m-section1 {
     position: relative;
     width: 100%;
@@ -133,6 +134,13 @@ html {
     width: 450px;
     height: 450px;
     background-color: #4563b6;
+    border-radius: 100%;
+}
+
+.m-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 100%;
 }
 
