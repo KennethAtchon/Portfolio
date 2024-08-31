@@ -25,13 +25,6 @@
     gap: 12px;
 }
 
-@media (max-width: 750px) {
-
-    .m-services-items{
-        flex: 0 0 calc(50% - 20px);
-    }
-
-}
 
 
 .m-service-profile {
@@ -59,6 +52,39 @@
 
 }
 
+@media (max-width: 750px) {
+
+    .m-service-profile {
+        width: 60px;
+        height: 60px;
+    }
+
+    .m-services{
+        margin: 12px;
+    }
+
+    .m-text6{
+        font-size: 16px;
+    }
+
+    .m-content6 {
+        font-size: 12px;
+    }
+
+    .m-services-items{
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .m-service-title {
+        font-size: 16px;
+    }
+
+    .m-service-content {
+        font-size: 12px;
+    }
+
+}
+
 .dark-mode .m-service-content {
     color: #AECFDF;
 }
@@ -73,7 +99,6 @@
     height: auto;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
 }
 
 .m-contact-cards-items {
@@ -86,6 +111,7 @@
     display: flex;
     background-color: white;
     flex-direction: row;
+    align-items: center;
     gap: 4px;
 }
 
@@ -102,6 +128,11 @@
     .m-contact-cards-items{
         flex: 0 0 calc(100% - 20px);
         aspect-ratio: 4 / 1;
+    }
+
+    .m-section8 {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 
@@ -125,6 +156,8 @@
     object-fit: contain; /* Preserve aspect ratio of SVG */
 }
 
+
+
 .m-contact-text {
     padding: 8px;
 }
@@ -138,6 +171,18 @@
     padding-top: 12px;
 }
 
+@media (max-width: 750px) {
+
+    .m-contact-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .m-contact-content {
+        font-size: 16px;
+    }
+}
+
 .m-map {
     width: 100%;
     height: 50vh;
@@ -146,6 +191,7 @@
     justify-content: center;
     flex-direction: column;
     padding-bottom: 24px;
+    padding-top: 24px;
     
 
 }
