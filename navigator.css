@@ -1,3 +1,17 @@
+body {
+    background-image: url('bgimagelight.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.dark-mode {
+    background-image: url('bgimage.jpg'); /* Same image for dark mode, or choose a different one */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .dark-mode-toggle {
     position: absolute;
     top: 20px;
