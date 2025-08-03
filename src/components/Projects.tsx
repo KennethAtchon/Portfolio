@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: 'POG AI - Prognostic Optimization Group',
       description: 'Transformed Figma designs into a responsive website with robust PostgreSQL database and advanced analytics. Enhanced user insights and site performance through precise implementation and testing.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
       technologies: ['React', 'PostgreSQL', 'Figma', 'JavaScript', 'CSS'],
       github: 'https://github.com/KennethAtchon',
       demo: '#',
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: 'DataAnnotation AI Training',
       description: 'Evaluated and graded AI system performance to enhance coding capabilities. Provided detailed feedback improving AI accuracy and reliability while developing strong code review skills.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
       technologies: ['AI/ML', 'Code Review', 'Python', 'Data Analysis'],
       github: 'https://github.com/KennethAtchon',
       demo: '#'
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: 'Broovie - Movie Application',
       description: 'Full-stack movie application with user authentication, movie database integration, and responsive design. Features include search, ratings, and personalized recommendations.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1489599735734-79b4169c4388?w=600&h=400&fit=crop',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'API Integration'],
       github: 'https://github.com/KennethAtchon',
       demo: '#'
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: 'Trivowear - E-commerce Platform',
       description: 'Complete e-commerce solution with user authentication, payment processing, and inventory management. Built with modern web technologies and responsive design.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
       technologies: ['React', 'Node.js', 'MySQL', 'Stripe', 'AWS'],
       github: 'https://github.com/KennethAtchon',
       demo: '#'
@@ -41,7 +41,7 @@ const Projects = () => {
     {
       title: 'Bug Tracker - Project Management',
       description: 'Comprehensive bug tracking and project management tool with team collaboration features, issue tracking, and progress monitoring.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
       technologies: ['React', 'Python', 'Django', 'PostgreSQL', 'REST API'],
       github: 'https://github.com/KennethAtchon',
       demo: '#'
