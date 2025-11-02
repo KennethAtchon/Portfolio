@@ -40,10 +40,7 @@ const Footer = () => {
         <div className="border-t border-glass-border my-8"></div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p className="flex items-center">
-            Made with <Heart className="w-4 h-4 mx-1 text-red-500" /> by Kenneth Atchon
-          </p>
+        <div className="flex flex-col md:flex-row justify-end items-center text-sm text-muted-foreground">
           <p className="mt-2 md:mt-0">
             © {currentYear} All rights reserved.
           </p>

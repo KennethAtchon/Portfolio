@@ -48,7 +48,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Crown Point, IN',
+      details: 'Seattle, WA',
       link: null
     },
     {

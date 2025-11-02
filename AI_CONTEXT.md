@@ -4,7 +4,7 @@
 - **Name**: Kenneth Atchon
 - **Email**: kenneth.atchon@gmail.com
 - **Phone**: +1 (219) 386-6604
-- **Location**: Crown Point, IN
+- **Location**: Seattle WA
 - **GitHub**: https://github.com/KennethAtchon
 - **Nationality**: USA Citizen / African American
 

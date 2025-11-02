@@ -68,8 +68,7 @@ const Resume = () => {
 
   const certifications = [
     'AWS Certified Developer - Associate',
-    'Azure Cloud Administrator',
-    'MongoDB Certified Developer'
+    'Azure Cloud Administrator'
   ];
 
   return (

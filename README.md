@@ -30,7 +30,7 @@ I'm Kenneth Atchon, a Software Developer I at Amazon with expertise in full-stac
 ## Contact Information
 - **Email**: kenneth.atchon@gmail.com
 - **Phone**: +1 (219) 386-6604
-- **Location**: Crown Point, IN
+- **Location**: Seattle, WA
 - **GitHub**: https://github.com/KennethAtchon
 
 ## Project Technologies
