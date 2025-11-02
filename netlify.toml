@@ -1,6 +1,6 @@
 [build]
-  # Build command
-  command = "npm run build"
+  # Build command - use ci to ensure clean install
+  command = "npm ci && npm run build"
   # Directory that will be deployed to Netlify
   publish = "dist"
 
