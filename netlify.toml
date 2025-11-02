@@ -1,0 +1,15 @@
+[build]
+  # Build command
+  command = "npm run build"
+  # Directory that will be deployed to Netlify
+  publish = "dist"
+
+[[redirects]]
+  # Redirect all routes to index.html for client-side routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # Node version (optional, Netlify will use a recent version by default)
+  NODE_VERSION = "18"
