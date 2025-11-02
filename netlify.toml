@@ -1,6 +1,6 @@
 [build]
-  # Build command - remove lock, clean install, and build
-  command = "rm -f package-lock.json && npm install && npm run build"
+  # Build command
+  command = "npm ci && npm run build"
   # Directory that will be deployed to Netlify
   publish = "dist"
 
@@ -13,5 +13,3 @@
 [build.environment]
   # Node version
   NODE_VERSION = "20"
-  # Skip optional dependency warnings
-  NPM_FLAGS = "--legacy-peer-deps"
