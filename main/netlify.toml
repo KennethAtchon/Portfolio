@@ -11,7 +11,9 @@
   # Enable pnpm
   PNPM_VERSION = "9"
 
-# The @netlify/plugin-nextjs plugin should be installed via Netlify UI
-# It will automatically handle the output directory and routing
-# The plugin processes the .next directory created by Next.js build
+# Configure the Netlify Next.js plugin
+# This plugin is required for Next.js to work properly on Netlify
+# It handles routing, server-side rendering, and static generation
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
