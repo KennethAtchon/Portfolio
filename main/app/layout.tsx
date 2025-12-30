@@ -64,7 +64,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${spaceGrotesk.variable} ${spaceMono.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
+        {/* Only load Vercel Analytics on Vercel deployments */}
+        {process.env.VERCEL && <Analytics />}
       </body>
     </html>
   )

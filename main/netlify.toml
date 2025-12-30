@@ -1,6 +1,6 @@
 [build]
-  # Build command
-  command = "bun run build"
+  # Build command - using pnpm
+  command = "pnpm install && pnpm run build"
   # IMPORTANT: Do NOT set a publish directory here
   # The @netlify/plugin-nextjs plugin handles the output directory automatically
   # If you have a publish directory set in Netlify UI, remove it or set it to empty
@@ -8,6 +8,8 @@
 [build.environment]
   # Node version
   NODE_VERSION = "20"
+  # Enable pnpm
+  PNPM_VERSION = "9"
 
 # The @netlify/plugin-nextjs plugin should be installed via Netlify UI
 # It will automatically handle the output directory and routing
