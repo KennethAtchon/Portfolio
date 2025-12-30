@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
+import content from "@/data/content.json"
 
 export function Contact() {
+  const { contact } = content
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +19,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
+    // TODO: Implement actual form submission
   }
 
   return (
@@ -25,13 +28,12 @@ export function Contact() {
         <div className="space-y-4">
           <div className="relative inline-block">
             <h2 className="text-4xl font-black tracking-tight text-foreground md:text-6xl uppercase relative z-10">
-              Let's Talk
+              {contact.title}
             </h2>
             <div className="absolute -bottom-2 left-0 w-1/2 h-4 bg-secondary -z-10" />
           </div>
           <p className="text-lg text-foreground max-w-2xl leading-relaxed font-bold">
-            Got an interesting project? Want to chat about tech? Just want to debate tabs vs spaces? I'm all ears. Drop
-            me a line and I'll get back to you faster than a Redis cache hit.
+            {contact.description}
           </p>
         </div>
 
@@ -39,18 +41,41 @@ export function Contact() {
           <div className="space-y-6">
             <div className="border-4 border-foreground p-6 bg-secondary/20 shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
               <h3 className="text-lg font-black text-foreground mb-2 uppercase">Email</h3>
-              <a
-                href="mailto:alex.johnson@example.com"
-                className="text-base text-foreground hover:text-foreground/70 transition-colors font-bold"
-              >
-                alex.johnson@example.com
-              </a>
+              <div className="space-y-2">
+                <a
+                  href={`mailto:${contact.email.primary}`}
+                  className="block text-base text-foreground hover:text-foreground/70 transition-colors font-bold"
+                >
+                  {contact.email.primary}
+                </a>
+                <a
+                  href={`mailto:${contact.email.career}`}
+                  className="block text-sm text-foreground/80 hover:text-foreground/70 transition-colors font-medium"
+                >
+                  {contact.email.career} (Career)
+                </a>
+              </div>
             </div>
 
             <div className="border-4 border-foreground p-6 bg-muted/20 shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
+              <h3 className="text-lg font-black text-foreground mb-2 uppercase">Phone</h3>
+              <a
+                href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                className="text-base text-foreground hover:text-foreground/70 transition-colors font-bold"
+              >
+                {contact.phone}
+              </a>
+            </div>
+
+            <div className="border-4 border-foreground p-6 bg-accent/20 shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
+              <h3 className="text-lg font-black text-foreground mb-2 uppercase">Location</h3>
+              <p className="text-base text-foreground font-bold">{contact.location}</p>
+            </div>
+
+            <div className="border-4 border-foreground p-6 bg-secondary/20 shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
               <h3 className="text-lg font-black text-foreground mb-2 uppercase">Resume</h3>
               <a
-                href="/resume.pdf"
+                href={contact.resume}
                 className="inline-flex text-base text-foreground hover:text-foreground/70 transition-colors font-bold"
                 download
               >

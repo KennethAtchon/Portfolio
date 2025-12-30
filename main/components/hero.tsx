@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import content from "@/data/content.json"
 
 export function Hero() {
+  const { hero } = content
+
   return (
     <section className="relative mx-auto max-w-6xl px-6 pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Multiple geometric shapes for depth */}
@@ -16,16 +19,15 @@ export function Hero() {
       <div className="space-y-12 relative z-10">
         <div className="space-y-6">
           <h1 className="text-6xl font-black tracking-tight text-foreground md:text-8xl text-balance leading-[0.95] uppercase">
-            Hi, I'm Alex Johnson
+            {hero.greeting}
           </h1>
           <p className="text-2xl text-foreground md:text-3xl font-bold tracking-wide uppercase border-l-8 border-accent pl-6">
-            Software Engineer · System Designer · Coffee Enthusiast
+            {hero.tagline}
           </p>
         </div>
 
         <p className="max-w-2xl text-xl text-foreground leading-relaxed md:text-2xl font-medium">
-          I turn complex problems into elegant solutions. When I'm not refactoring code or debugging distributed
-          systems, you'll find me exploring new tech, contributing to open source, or perfecting my pour-over technique.
+          {hero.description}
         </p>
 
         <div className="flex flex-wrap gap-6 pt-6">

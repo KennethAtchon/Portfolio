@@ -8,10 +8,24 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-space-mono" })
 
 export const metadata: Metadata = {
-  title: "Alex Johnson - Software Engineer",
+  title: "Kenneth Atchon - Software Developer | Mobile Developer | Full Stack Developer",
   description:
-    "Portfolio of Alex Johnson, a software engineer focused on building reliable, well-structured software with attention to detail.",
-  generator: "v0.app",
+    "Portfolio of Kenneth Atchon, a Software Developer at Amazon working on authentication systems for the AtoZ app. Specializing in React Native, mobile development, and full-stack solutions. Available for freelance work.",
+  generator: "Next.js",
+  keywords: [
+    "Kenneth Atchon",
+    "Software Developer",
+    "Mobile Developer",
+    "Full Stack Developer",
+    "React Native",
+    "Amazon",
+    "Seattle",
+    "Freelance Developer",
+    "Web Development",
+    "Mobile App Development"
+  ],
+  authors: [{ name: "Kenneth Atchon" }],
+  creator: "Kenneth Atchon",
   icons: {
     icon: [
       {
@@ -28,6 +42,17 @@ export const metadata: Metadata = {
       },
     ],
     apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Kenneth Atchon - Software Developer",
+    description: "Software Developer at Amazon | Mobile Developer | Full Stack Developer | Available for Freelance",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kenneth Atchon - Software Developer",
+    description: "Software Developer at Amazon | Mobile Developer | Full Stack Developer",
   },
 }
 

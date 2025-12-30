@@ -1,0 +1,268 @@
+{
+  "personal": {
+    "fullName": "Kenneth Atchon",
+    "firstName": "Kenneth",
+    "lastName": "Atchon",
+    "primaryEmail": "kenneth.atchon@gmail.com",
+    "careerEmail": "katchon.career@gmail.com",
+    "phone": "+1 (219) 386-6604",
+    "currentLocation": "Seattle, WA",
+    "previousLocation": "Crown Point, IN 46307",
+    "nationality": "USA Citizen / African American",
+    "language": "English",
+    "github": "https://github.com/KennethAtchon",
+    "freelanceStatus": "Available"
+  },
+  "professionalTitles": [
+    "Software Developer",
+    "Mobile Developer",
+    "Full Stack Developer",
+    "Freelancer",
+    "React Developer",
+    "Backend Developer",
+    "Content Creator"
+  ],
+  "currentPosition": {
+    "title": "Software Developer I",
+    "company": "Amazon",
+    "location": "Seattle, WA",
+    "startDate": "November 2024",
+    "status": "Present",
+    "team": "Authentication Team for AtoZ App",
+    "description": "Work on the authentication team for Amazon's AtoZ app, a public-facing internal application. Contribute significantly to React Native migration projects, modernizing legacy mobile applications. Develop and maintain cross-platform mobile applications using React Native, Objective-C/Swift, and Java. Learned and implemented GraphQL for mobile application data fetching and API integration. Collaborate with cross-functional teams to deliver high-quality mobile software solutions. Implement automated testing and CI/CD pipelines improving deployment efficiency by 40%. Optimize mobile application performance and user experience across iOS and Android platforms. Build scalable mobile solutions that impact millions of users worldwide across iOS and Android platforms."
+  },
+  "hero": {
+    "greeting": "Hi, I'm Kenneth Atchon",
+    "tagline": "Software Developer · Mobile Developer · Full Stack Developer",
+    "description": "I'm a Software Developer at Amazon working on authentication systems for the AtoZ app, impacting millions of users worldwide. I specialize in React Native, mobile development, and full-stack solutions. When I'm not building scalable mobile applications or migrating legacy systems, you'll find me exploring new technologies, contributing to open source, or working on side projects that solve real-world problems."
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I'm Kenneth Atchon, a Software Engineer with expertise in full-stack web development, mobile development, and cloud-based solutions. With a Bachelor's degree in Computer Science from Purdue University Calumet (GPA: 3.87, Magna Cum Laude), I've developed and deployed dynamic web applications using React JS, React Native, AWS, MySQL, and MongoDB.",
+      "My experience includes improving AI training datasets, transforming Figma designs into responsive websites, and optimizing cloud infrastructures. I'm passionate about leveraging technology to solve complex problems, continuously learning, and delivering high-quality solutions that drive user engagement and efficiency.",
+      "As a Software Developer I at Amazon, I work on the authentication team for the AtoZ app, a public-facing internal application. I contribute significantly to React Native migration projects and develop cross-platform mobile applications using React Native, Objective-C/Swift, and Java. I've learned and implemented GraphQL for mobile application data fetching and API integration. I work on building scalable mobile solutions that impact millions of users worldwide across iOS and Android platforms, while handling various development tasks as needed.",
+      "I believe the best engineers are equal parts problem solver, communicator, and pragmatist. Currently, I'm most excited about building reliable, maintainable software that actually solves real problems—not just impressive-sounding ones. I'm always eager to learn new technologies and apply them to create meaningful impact."
+    ]
+  },
+  "workProjects": [
+    {
+      "name": "AtoZ Mobile Authentication Migration to React Native",
+      "summary": "Complete migration from native iOS/Android to React Native for Amazon's AtoZ app authentication system",
+      "problem": "AtoZ (Amazon's internal platform for managing associates/employees) had a login page built in native iOS/Android. There were multiple issues: the AtoZ codebase was mostly already on React Native and we wanted to migrate to React Native to better integrate with other features. The native iOS/Android codebase was very tedious to update - a developer would have to update both codebases with different development principles, doubling development time. We also needed to learn how both sides of the codebases work, adding extra overhead.",
+      "solution": "Contributed to complete migration from native iOS/Android to React Native under Arthur's leadership. Recreated 8+ authentication screens with enhanced accessibility features. Migrated 100+ metrics from native iOS/Android and eliminated redundant metrics. Implemented React Context, session management, demo mode, and logging systems. I was in charge of creating the new authentication screens based on provided Figma and old design, and enhancing accessibility features to make the login screen born accessible with great coverage on screen sizes and good screen reader functionality.",
+      "impact": "The React Native migration cut development time in half by merging them into one codebase, ensured the login of AtoZ was modernized like the rest of the app, and improved code readability, metrics, and accessibility while doing the migration.",
+      "techStack": ["React Native", "Objective-C", "Swift", "Java", "GraphQL", "iOS", "Android", "React Context", "CI/CD"],
+      "period": "Q4 2024 - Q2 2025",
+      "company": "Amazon"
+    },
+    {
+      "name": "2-Person Review Spoofing for Demo Mode",
+      "summary": "Security solution addressing Shepherd risk from Amazon Security, enabling demo mode expansion",
+      "problem": "Demo mode expansion to US and 12 EU countries was locked due to security concerns. Our current package was growing into a monolith and we needed to split it to prevent monolith growth.",
+      "solution": "Delivered 2PR security solution addressing Shepherd risk from Amazon Security. Created Spoofing package preventing monolith growth. Implemented polling mechanism, approval screens for associates, waiting state for managers, and deeplink handling ensuring it works properly.",
+      "impact": "Unlocked demo mode expansion to US and 12 EU countries. The solution helped address security concerns while maintaining clean architecture by keeping the feature in a separate package.",
+      "techStack": ["React Native", "Security", "Deeplinks", "Polling", "iOS", "Android"],
+      "period": "Q3-Q4 2025",
+      "company": "Amazon"
+    },
+    {
+      "name": "Alumni Lite Launch",
+      "summary": "Global feature launch with multi-language email templates for Amazon AtoZ",
+      "problem": "Need to launch Alumni Lite feature globally with controlled rollout and multi-language support.",
+      "solution": "Implemented feature gate for controlled rollout. Created 4 HTML email templates translated into 27 languages (108 total files). Successfully launched globally.",
+      "impact": "Successfully launched Alumni Lite globally with proper feature gating and comprehensive multi-language support, enabling pivot users to sign up for Alumni Lite during transition.",
+      "techStack": ["React Native", "Feature Gates", "Email Templates", "Multi-language Support"],
+      "period": "Q3 2025",
+      "company": "Amazon"
+    },
+    {
+      "name": "POG AI - Prognostic Optimization Group",
+      "summary": "Transformed Figma designs into responsive website with robust PostgreSQL database and advanced analytics",
+      "problem": "Need to transform Figma designs into a functional, responsive website with database capabilities and analytics.",
+      "solution": "Transformed Figma designs into responsive websites ensuring smooth user experience across devices through precise implementation and testing. Developed robust PostgreSQL database with advanced analytics, enhancing user insights and site performance. Sharpened skills in both front-end development and database management. Implemented precise testing and optimization strategies.",
+      "impact": "Enhanced user insights and site performance through precise implementation and testing. Delivered a fully responsive website with advanced analytics capabilities.",
+      "techStack": ["React", "PostgreSQL", "Figma", "JavaScript", "CSS"],
+      "period": "May 2024 – August 2024",
+      "company": "Prognostic Optimization Group"
+    }
+  ],
+  "personalProjects": [
+    {
+      "name": "Broovie - Movie Application",
+      "summary": "Full-stack movie application with user authentication, movie database integration, and responsive design",
+      "problem": "Need to build a complete movie application with user features, search, and recommendations.",
+      "solution": "Built full-stack movie application with user authentication, movie database integration, and responsive design. Features include search, ratings, and personalized recommendations.",
+      "impact": "Created a fully functional movie application demonstrating full-stack development skills with modern web technologies.",
+      "techStack": ["React", "Node.js", "MongoDB", "Express", "API Integration"],
+      "period": "2023",
+      "github": "https://github.com/KennethAtchon/Broovie"
+    },
+    {
+      "name": "Trivowear - E-commerce Platform",
+      "summary": "Complete e-commerce solution with user authentication, payment processing, and inventory management",
+      "problem": "Need to build a complete e-commerce platform with all essential features.",
+      "solution": "Built complete e-commerce solution with user authentication, payment processing, and inventory management. Built with modern web technologies and responsive design.",
+      "impact": "Delivered a production-ready e-commerce platform demonstrating expertise in full-stack development and payment integration.",
+      "techStack": ["React", "Node.js", "MySQL", "Stripe", "AWS"],
+      "period": "2024",
+      "github": "https://github.com/KennethAtchon/Trivowear"
+    },
+    {
+      "name": "Unital - Document Conversion Tool",
+      "summary": "GUI application built in Python to help people convert word documents, filter them, and compare files",
+      "problem": "Need a tool to help people convert, filter, and compare word documents efficiently.",
+      "solution": "Built a GUI application in Python called 'Unital' to help people convert word documents, filter them, and compare files.",
+      "impact": "Created a useful utility tool demonstrating Python GUI development skills and problem-solving abilities.",
+      "techStack": ["Python", "GUI"],
+      "period": "2024",
+      "github": "https://github.com/KennethAtchon/Unital"
+    }
+  ],
+  "techStack": {
+    "Mobile Development": [
+      "React Native",
+      "Objective-C",
+      "Swift",
+      "Java (Android)",
+      "iOS",
+      "Android"
+    ],
+    "Frontend": [
+      "React",
+      "HTML/CSS",
+      "JavaScript",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express",
+      "Strapi",
+      "GraphQL"
+    ],
+    "Databases": [
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "Cloud & Infrastructure": [
+      "AWS",
+      "Azure",
+      "AWS Amplify"
+    ],
+    "Other Technologies": [
+      "Git",
+      "REST API",
+      "GraphQL",
+      "AI/ML",
+      "Code Review",
+      "Data Analysis",
+      "Mobile App Migration",
+      "CI/CD",
+      "Automated Testing"
+    ]
+  },
+  "programmingLanguages": {
+    "Python": 90,
+    "C++": 75,
+    "Java": 65,
+    "NodeJS": 80,
+    "Web Dev (HTML/CSS)": 80,
+    "React": 80
+  },
+  "education": {
+    "degree": "Bachelor of Science in Computer Science",
+    "university": "Purdue University Calumet",
+    "location": "Hammond, IN",
+    "period": "2021 - 2024",
+    "gpa": "3.87",
+    "honors": "Magna Cum Laude / High Honors",
+    "description": "Graduated with high honors (GPA: 3.87) in Computer Science, completing a curriculum that included courses in Data Structures, Algorithms, Operating Systems, Database Management, and Software Engineering. Education provided a strong foundation in both theoretical concepts and practical applications, preparing for a dynamic career in technology."
+  },
+  "workExperience": [
+    {
+      "title": "Software Developer I",
+      "company": "Amazon",
+      "period": "November 2024 - Present",
+      "location": "Seattle, WA",
+      "description": "Work on the authentication team for Amazon's AtoZ app, a public-facing internal application. Contribute significantly to React Native migration projects, modernizing legacy mobile applications. Develop and maintain cross-platform mobile applications using React Native, Objective-C/Swift, and Java. Learned and implemented GraphQL for mobile application data fetching and API integration. Collaborate with cross-functional teams to deliver high-quality mobile software solutions. Implement automated testing and CI/CD pipelines improving deployment efficiency by 40%. Optimize mobile application performance and user experience across iOS and Android platforms. Handle various development tasks as needed, adapting to project requirements."
+    },
+    {
+      "title": "Full Stack Developer Intern",
+      "company": "Prognostic Optimization Group",
+      "period": "May 2024 – August 2024",
+      "location": "Remote",
+      "description": "Transformed Figma designs into responsive websites ensuring smooth user experience across devices through precise implementation and testing. Developed robust PostgreSQL database with advanced analytics, enhancing user insights and site performance. Sharpened skills in both front-end development and database management. Implemented precise testing and optimization strategies."
+    },
+    {
+      "title": "Software Developer - AI Trainer",
+      "company": "DataAnnotation.tech",
+      "period": "June 2023 – November 2024",
+      "location": "Remote",
+      "description": "In this freelancing role, chose tasks that matched interests, primarily focusing on evaluating and grading the performance of AI systems to enhance their coding capabilities. Provided detailed and nuanced feedback, which significantly improved AI accuracy and reliability. This experience also allowed for developing strong code review and comprehension skills."
+    },
+    {
+      "title": "Cloud Administrator Intern",
+      "company": "Arpa-Cloud",
+      "period": "May 2023 – August 2023",
+      "location": "Remote",
+      "description": "Supported senior Azure admins in developing and maintaining private and hybrid cloud infrastructures. Tasks included establishing VNets and subnets, managing network routing and peering, deploying and configuring IaaS components, and updating IAM and resource policies."
+    }
+  ],
+  "contact": {
+    "title": "Let's Talk",
+    "description": "Got an interesting project? Want to chat about tech? Looking for a software developer for your next mobile or web application? I'm available for freelance work and always excited to discuss new opportunities. Drop me a line and I'll get back to you as soon as possible.",
+    "email": {
+      "primary": "kenneth.atchon@gmail.com",
+      "career": "katchon.career@gmail.com"
+    },
+    "phone": "+1 (219) 386-6604",
+    "location": "Seattle, WA",
+    "resume": "/Resume.pdf",
+    "downloads": {
+      "resume": "/Resume.pdf",
+      "cs30200Project1": "/downloads/CS30200Project1.zip",
+      "cs336Hw3": "/downloads/CS336Hw3Atchon.zip",
+      "hw3": "/downloads/hw3.zip",
+      "hw4Work": "/downloads/hw4_work.zip"
+    }
+  },
+  "social": {
+    "github": "https://github.com/KennethAtchon",
+    "linkedin": "",
+    "email": "kenneth.atchon@gmail.com"
+  },
+  "services": {
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "I create responsive, visually appealing websites optimized for performance and user experience."
+    },
+    "appDevelopment": {
+      "title": "App Development",
+      "description": "From concept to deployment, I build intuitive, scalable, and secure mobile and web applications."
+    },
+    "uiuxDesign": {
+      "title": "UI/UX Design",
+      "description": "I design user-centric interfaces that are both visually stunning and highly functional."
+    },
+    "gameDevelopment": {
+      "title": "Game Development",
+      "description": "I develop immersive games with captivating graphics and smooth performance from concept to release."
+    },
+    "missionStatement": "My mission is to help you create a fully functional website that drives your success. Whether you're building an e-commerce platform, a SaaS product, or any other type of business, I'm here to bring your vision to life."
+  },
+  "certifications": [
+    "AWS Certified Developer - Associate",
+    "Azure Cloud Administrator",
+    "MongoDB Certified Developer"
+  ],
+  "highlights": {
+    "cleanCode": "Writing maintainable, scalable, and efficient code following best practices and design patterns.",
+    "performance": "Optimizing applications for speed, scalability, and exceptional user experience.",
+    "collaboration": "Working effectively in cross-functional teams using Agile methodologies and modern tools.",
+    "problemSolving": "Analyzing complex requirements and delivering innovative solutions that exceed expectations."
+  },
+  "personalStatement": "Passionate software engineer with expertise in full-stack web development and cloud-based solutions, dedicated to creating exceptional digital experiences. Passionate about leveraging technology to solve complex problems, continuously learning, and delivering high-quality solutions that drive user engagement and efficiency."
+}
+

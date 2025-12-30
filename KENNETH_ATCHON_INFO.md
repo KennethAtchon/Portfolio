@@ -49,6 +49,49 @@
 
 Work on the authentication team for Amazon's AtoZ app, a public-facing internal application. Contribute significantly to React Native migration projects, modernizing legacy mobile applications. Develop and maintain cross-platform mobile applications using React Native, Objective-C/Swift, and Java. Learned and implemented GraphQL for mobile application data fetching and API integration. Collaborate with cross-functional teams to deliver high-quality mobile software solutions. Implement automated testing and CI/CD pipelines improving deployment efficiency by 40%. Optimize mobile application performance and user experience across iOS and Android platforms. Handle various development tasks as needed, adapting to project requirements.
 
+#### Work Summary
+
+##### Major Projects Delivered
+
+**AtoZMobileAuthentication Migration to React Native (Q4 2024 - Q2 2025)**
+- Contributed to complete migration from native iOS/Android to React Native under Arthur's leadership
+- Recreated 8+ authentication screens with enhanced accessibility features
+- Migrated 100+ metrics from native ios/android and eliminated redundant metrics
+- Implemented React Context, session management, demo mode, and logging systems
+
+**Impact**: AtoZ (Amazon's internal platform for managing associates/employees) had a login page that was built in native iOS/Android. There were multiple issues with this. AtoZ codebase was mostly already on React Native and we wanted to migrate to React Native to better integrate with other features of the app. The native iOS/Android codebase was also very tedious to update - a developer would have to update both the iOS codebase and the Android codebase and they had different development principles and ways to update to ensure parity. This had the effect of doubling development time. We would also need to learn how both sides of the codebases work which is extra overhead. The React Native migration cut the development time in half by merging them into one codebase, ensured the login of AtoZ was modernized like the rest of the app, and we improved things like code readability, metrics, and accessibility while doing the migration.
+
+I was in charge of creating the new authentication screens based on provided Figma and old design, and I was in charge of enhancing accessibility features to make the login screen born accessible. I ensured great coverage on screen sizes, good screen reader functionality with accessibility labels and text.
+
+I implemented things like: React Context, session management (session expiration logic), demo mode (for app testers), and logging system (found a new way to log metrics and implemented all the previous logging into the new app).
+
+**2-Person Review Spoofing for Demo Mode (Q3-Q4 2025)**
+- Delivered 2PR security solution addressing Shepherd risk from Amazon Security
+- Created Spoofing package preventing monolith growth
+- Implemented polling mechanism, approval screens, and deeplink handling
+- **Impact**: Unlocked demo mode expansion to US and 12 EU countries
+
+**Context**: Our current package was growing into a monolith and we took the initiative to split it. We created our new feature in a separate package to ensure the main package doesn't become a monolith. I implemented the polling mechanism, the approval screen for associates, and waiting state for managers, and I also worked on the deeplink handling and ensuring it works properly. This helped unlock the demo mode expansion to the US and 12 EU countries. It was currently locked due to security concerns that I helped address.
+
+**Pivot Transition Alumni Feature (Q3-Q4 2025)**
+- Modified auto-trigger system consuming PeopleBus Access Revoked V2 events
+- Enabled pivot users to sign up for Alumni Lite during transition
+- Synchronized with AtoZ Azul team on approach
+
+**Alumni Lite Launch (Q3 2025)**
+- Implemented feature gate for controlled rollout
+- Created 4 HTML email templates translated into 27 languages (108 total files)
+- Successfully launched globally
+
+**Kiosk Authentication Investigation (Q3-Q4 2025)**
+- Investigated WebSocket solution for logout issue
+
+**Impact**: Solution was rejected but learned how to work with very tight constraints.
+
+The issue was kiosk machines were authenticating using Kerberos. We owned the AtoZ app, which is supposed to log the user out. We can log the user out from the web browser with every other authentication provider except Kerberos as it is tied to the actual device. We created a workaround. We would have a long-lived WebSocket connection, opened up by the client to our website. And we would send an event to the client computer. The client computer would then shut down the PC, which will have the effect of clearing Kerberos auth. This was the only working solution given that it's impossible for a web browser to close a desktop by itself.
+
+The solution was rejected in favor of just migrating away from Kerberos authentication.
+
 ### Full Stack Developer Intern - Prognostic Optimization Group
 **Period**: May 2024 – August 2024  
 **Location**: Remote
@@ -321,52 +364,3 @@ Passionate software engineer with expertise in full-stack web development and cl
 
 *Last Updated: Based on information from /oldcode and /viteproject directories*  
 *This document consolidates all personal, professional, and project information for easy reference and reuse.*
-
-
--------------
-
-Amazon experience
-
-# Work Summary
-
-## Major Projects Delivered
-
-### AtoZMobileAuthentication Migration to React Native (Q4 2024 - Q2 2025)
-- Contributed to complete migration from native iOS/Android to React Native under Arthur's leadership
-- Recreated 8+ authentication screens with enhanced accessibility features
-- Migrated 100+ metrics from native ios/android and eliminated redundant metrics
-- Implemented React Context, session management, demo mode, and logging systems
-
-Impacted: AtoZ (Amazons internal platform for managing associates/employees) had a login page that was built in native iOS/Android. There was multiple issues with this. AtoZ codebase was mostly already on react native and we wanted to migrate to react native to better integrate with other features of the app. The native iOS/Android codebase has also very tedious to update, a developer would have to update both the ios codebase and the android codebase and they had different development principles and ways to update to ensure parity. This had the effect of doubling development time. We would also need to learn how both sides of the codebases work which is extra overhead. The react native migration cut the development time in half by merging them into one codebase, ensure the login of AtoZ was modernized like the rest of the app, and we improved things like code readability, metrics, and accessibility while doing the migration. 
-
-I was in charge of creating the new authentication screens based on provided figma and old design, and I was incharge of enhancing accessibility features to make the login screen born accessible. I ensure great coverage on screen sizes, good screen reader functionality with accessibility labels and text. 
-
-I implemented things like: React Context, session management (session expiration logic), demo mode (for app testers), and logging system (found a new way to log metrics and implemented all the previous logging into the new app)
-
-
-### 2-Person Review Spoofing for Demo Mode (Q3-Q4 2025)
-- Delivered 2PR security solution addressing Shepherd risk from Amazon Security
-- Created Spoofing package preventing monolith growth
-- Implemented polling mechanism, approval screens, and deeplink handling
-- **Impact**: Unlocked demo mode expansion to US and 12 EU countries
-
-Context: Our current package was growing into a monolith and we took the intitive to split it. We created our new feature in a separate package to ensure the main package doesn't become a monolith. I implemented the polling mechanism, the approval screen for associates, and waiting state for managers, and I also worked on the deeplink handling and ensuring it works properly. This helped unlock the demo mode expansion to the US and 12 EU countries. It was currently locked due to security concerns that I helped address. 
-
-### Pivot Transition Alumni Feature (Q3-Q4 2025)
-- Modified auto-trigger system consuming PeopleBus Access Revoked V2 events
-- Enabled pivot users to sign up for Alumni Lite during transition
-- Synchronized with AtoZ Azul team on approach
-
-### Alumni Lite Launch (Q3 2025)
-- Implemented feature gate for controlled rollout
-- Created 4 HTML email templates translated into 27 languages (108 total files)
-- Successfully launched globally
-
-### Kiosk Authentication Investigation (Q3-Q4 2025)
-- Investigated WebSocket solution for logout issue
-
-Impact: Solution was rejected but learned how to work with very tight constraint.
-
-The issue was kiosk machines were authenticating using kerberos. We owned the atoz app, which is suppose to log the user out. We can log the user out from the web browser with every other authentication provider except kerberos as it is tied to the actual device. We created a workaround. We would have a long live websocket connection, opened up by the client to our website. And we would send an event to the client computer. The client computer would then shut down the PC, which will have the effect of clearing kerberos auth. This was the only working solution give that its impossible for a web browser to close a desktop by itself.
-
-The solution was rejected in favor of just migrating away from kerberos authentication.
