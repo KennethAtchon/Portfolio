@@ -212,7 +212,7 @@
   ],
   "contact": {
     "title": "Let's Talk",
-    "description": "Got an interesting project? Want to chat about tech? Looking for a software developer for your next mobile or web application? I'm available for freelance work and always excited to discuss new opportunities. Drop me a line and I'll get back to you as soon as possible.",
+    "description": "Got an interesting project? Want to chat about tech? Looking to connect? Drop me a line and I'll get back to you as soon as possible.",
     "email": {
       "primary": "kenneth.atchon@gmail.com",
       "career": "katchon.career@gmail.com"
@@ -230,7 +230,8 @@
   },
   "social": {
     "github": "https://github.com/KennethAtchon",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/kenneth-atchon-488b81214/",
+    "leetcode": "https://leetcode.com/u/kennethatchon/",
     "email": "kenneth.atchon@gmail.com"
   },
   "services": {

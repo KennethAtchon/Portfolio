@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, Code } from "lucide-react"
 import Link from "next/link"
 import content from "@/data/content.json"
 
@@ -32,6 +32,18 @@ export function Footer() {
             </Link>
           )}
 
+          {social.leetcode && (
+            <Link
+              href={social.leetcode}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-foreground/70 transition-colors border-4 border-foreground p-3 bg-muted shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150"
+              aria-label="LeetCode"
+            >
+              <Code className="h-6 w-6" />
+            </Link>
+          )}
+
           <Link
             href={`mailto:${social.email}`}
             className="text-foreground hover:text-foreground/70 transition-colors border-4 border-foreground p-3 bg-accent shadow-[4px_4px_0_0_rgba(0,0,0,1)] hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150"
@@ -42,7 +54,7 @@ export function Footer() {
         </div>
 
         <p className="text-sm text-foreground text-center max-w-md font-bold uppercase border-4 border-foreground px-6 py-3 bg-white">
-          © {currentYear} {personal.fullName}. {personal.freelanceStatus === "Available" && "Available for freelance work."}
+          © {currentYear} {personal.fullName}.
         </p>
       </div>
     </footer>

@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["400", "700"], varia
 export const metadata: Metadata = {
   title: "Kenneth Atchon - Software Developer | Mobile Developer | Full Stack Developer",
   description:
-    "Portfolio of Kenneth Atchon, a Software Developer at Amazon working on authentication systems for the AtoZ app. Specializing in React Native, mobile development, and full-stack solutions. Available for freelance work.",
+    "Portfolio of Kenneth Atchon, a Software Developer at Amazon working on authentication systems for the AtoZ app. Specializing in React Native, mobile development, and full-stack solutions.",
   generator: "Next.js",
   keywords: [
     "Kenneth Atchon",
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     "React Native",
     "Amazon",
     "Seattle",
-    "Freelance Developer",
     "Web Development",
     "Mobile App Development"
   ],
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Kenneth Atchon - Software Developer",
-    description: "Software Developer at Amazon | Mobile Developer | Full Stack Developer | Available for Freelance",
+    description: "Software Developer at Amazon | Mobile Developer | Full Stack Developer",
     type: "website",
     locale: "en_US",
   },

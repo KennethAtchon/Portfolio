@@ -1,6 +1,14 @@
 # Content Management
 
-This directory contains the centralized content file for the portfolio website.
+This directory contains the centralized content file and documentation for the portfolio website.
+
+## Files in this Directory
+
+- **content.json** - Main content file with all website data
+- **README.md** - This file (quick overview)
+- **WEBSITE_CONTENT_GUIDE.md** - Comprehensive guide for managing website content
+- **CONTENT_TEMPLATES.md** - Quick reference templates for adding content
+- **WEBSITE_CONTENT_SNAPSHOT.md** - Current snapshot of all website content
 
 ## content.json
 
@@ -81,4 +89,12 @@ To support multiple languages in the future:
 - Escape special characters in strings
 - Keep arrays and objects properly formatted
 - Test the website after making changes to ensure everything displays correctly
+
+## Documentation
+
+For detailed instructions on managing content, see:
+
+- **WEBSITE_CONTENT_GUIDE.md** - Complete guide with examples and best practices
+- **CONTENT_TEMPLATES.md** - Copy-paste templates for quick updates
+- **WEBSITE_CONTENT_SNAPSHOT.md** - Reference of current website content
 
