@@ -1,0 +1,15 @@
+[build]
+  # Build command
+  command = "bun run build"
+  # IMPORTANT: Do NOT set a publish directory here
+  # The @netlify/plugin-nextjs plugin handles the output directory automatically
+  # If you have a publish directory set in Netlify UI, remove it or set it to empty
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "20"
+
+# The @netlify/plugin-nextjs plugin should be installed via Netlify UI
+# It will automatically handle the output directory and routing
+# The plugin processes the .next directory created by Next.js build
+
