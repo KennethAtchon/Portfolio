@@ -1,9 +1,10 @@
 [build]
   # Build command - using pnpm
   command = "pnpm install && pnpm run build"
-  # IMPORTANT: Do NOT set a publish directory here
-  # The @netlify/plugin-nextjs plugin handles the output directory automatically
-  # If you have a publish directory set in Netlify UI, remove it or set it to empty
+  # Publish directory - must be different from base directory (which is "main" in UI)
+  # Setting to ".next" makes it a subdirectory, which satisfies the plugin requirement
+  # The @netlify/plugin-nextjs plugin will process this directory
+  publish = ".next"
 
 [build.environment]
   # Node version
