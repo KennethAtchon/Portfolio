@@ -65,10 +65,11 @@ export function SelectedWork() {
       <div className="mt-14 border-t border-rule pt-[28px] lg:mt-[44px]">
         <div className="flex items-baseline justify-between">
           <h2 className="serif-caps text-[17.6px] leading-none tracking-[0.27em]">Selected work</h2>
-          <p className="relative -top-[4px] flex items-center gap-[18px] text-[14px] leading-none text-ink-3" aria-label={`${cards.length} projects`}>
-            <span>01</span>
+          <p className="relative -top-[4px] flex items-center gap-[18px] text-[14px] leading-none text-ink-3">
+            <span className="sr-only">{cards.length} projects</span>
+            <span aria-hidden>01</span>
             <span className="h-px w-[20px] bg-rule-soft" aria-hidden />
-            <span>{pad(cards.length)}</span>
+            <span aria-hidden>{pad(cards.length)}</span>
           </p>
         </div>
         <div className="mt-[21px] grid gap-x-[34px] gap-y-16 lg:grid-cols-19 lg:gap-y-[88px]">

@@ -26,10 +26,10 @@ function Heading({ children }: { children: string }) {
 function Row({ title, children }: { title: string; children: ReactNode }) {
   return (
     <div className="grid gap-5 border-t border-rule-soft py-10 lg:grid-cols-12 lg:gap-x-[34px]">
-      <div className="lg:col-span-3">
+      <div className="min-w-0 lg:col-span-3">
         <Heading>{title}</Heading>
       </div>
-      <div className="lg:col-span-8">{children}</div>
+      <div className="min-w-0 lg:col-span-8">{children}</div>
     </div>
   )
 }
@@ -59,7 +59,7 @@ export default async function WorkPage({ params }: { params: Promise<Params> }) 
       : []
 
   return (
-    <>
+    <div id="top">
       <SiteHeader />
       <main className="mx-auto max-w-[1536px] px-5 md:px-[50px]">
         <a href="/#work" className="caps mt-12 inline-flex items-center gap-3 text-[10.5px] text-ink-3 hover:text-blue">
@@ -189,6 +189,6 @@ export default async function WorkPage({ params }: { params: Promise<Params> }) 
         </a>
       </main>
       <SiteFooter />
-    </>
+    </div>
   )
 }

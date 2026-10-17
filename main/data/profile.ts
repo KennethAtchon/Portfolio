@@ -24,27 +24,6 @@ export const person = {
   },
 }
 
-export const headline = "I build the parts of software people only notice when they break."
-
-export const intro =
-  "Software engineer at Amazon working across web platform, sign-in and mobile: edge architecture, cross-site sessions, load time and authentication. Off the clock I build AI products, including a video editor you direct by talking to it."
-
-export const facts: { label: string; value: string; note?: string; live?: "time" }[] = [
-  { label: "Focus", value: "Web platform · Auth · Mobile" },
-  { label: "Experience", value: "2 years at Amazon", note: "+ 3 roles before" },
-  { label: "Based in", value: "Seattle, WA", live: "time" },
-  { label: "Work authorization", value: "U.S. citizen", note: "No sponsorship needed" },
-  { label: "Education", value: "B.S. Computer Science", note: "Purdue · 3.87 GPA" },
-]
-
-export const proof = [
-  { value: "0→1", label: "Multi-tenant platform I helped build from scratch" },
-  { value: "300+", label: "Tenants on a platform I made load faster" },
-  { value: "13", label: "Countries unlocked for demo mode" },
-  { value: "27", label: "Languages shipped in one launch" },
-  { value: "100+", label: "Metrics migrated to React Native" },
-]
-
 export type Work = {
   id: string
   title: string
