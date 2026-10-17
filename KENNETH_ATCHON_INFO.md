@@ -298,9 +298,11 @@ I develop immersive games with captivating graphics and smooth performance from 
 
 ## Certifications
 
-- AWS Certified Developer - Associate
-- Azure Cloud Administrator
-- MongoDB Certified Developer (mentioned in AI_CONTEXT.md)
+- Microsoft Azure Administrator Associate (June 2023)
+- Microsoft Azure Data Fundamentals (July 2023)
+
+These two are the certificates on the résumé PDF. Earlier versions of this file listed an AWS Certified
+Developer and a MongoDB certification that no source document supports; they were removed (2026-10-17).
 
 ## Key Highlights & Strengths
 
