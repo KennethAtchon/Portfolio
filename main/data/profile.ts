@@ -2,6 +2,7 @@
 // The résumé PDF (public/Kenneth-Atchon-Resume.pdf) is compiled from Ken's Overleaf project, its source of
 // truth: https://www.overleaf.com/project/6402857541203dfd475eb084. `roles` and `education` mirror it word
 // for word, so change them together. Titles and dates were checked against Ken's LinkedIn on 2026-10-17.
+// To change the résumé, follow /RESUME.md (Overleaf -> PDF -> this file -> Netlify).
 // Other sources: KENNETH_ATCHON_INFO.md, Ken's own descriptions of his Amazon work, and the repo READMEs.
 
 export const person = {
@@ -217,7 +218,7 @@ export const roles: Role[] = [
   {
     start: "Jun 2023",
     end: "Oct 2024",
-    title: "Software Developer, AI Trainer",
+    title: "Software Developer – AI Trainer",
     org: "DataAnnotation",
     place: "Remote · contract",
     points: ["Evaluated and refined LLM-generated backend and data-visualization code for correctness and quality."],
@@ -257,7 +258,7 @@ export const certificates = [
 export const toolbox: { group: string; items: string[]; proof: string }[] = [
   { group: "Languages", items: ["TypeScript", "JavaScript", "Python", "Java", "Swift", "Objective-C", "SQL", "C++"], proof: "TypeScript daily at Amazon and at home" },
   { group: "Web & platform", items: ["React", "Next.js", "Webpack 5", "Module Federation", "Node.js", "Bun", "Hono", "NestJS"], proof: "300+ tenant micro-frontend platform at Amazon" },
-  { group: "Cloud & edge", items: ["CloudFront", "Lambda@Edge", "AWS WAF", "AWS Lambda", "Amplify", "Azure"], proof: "Platform built from scratch at Amazon" },
+  { group: "Cloud & edge", items: ["CloudFront", "Lambda@Edge", "AWS WAF", "API Gateway", "ECS", "AWS Lambda", "Amplify", "Firebase", "Azure"], proof: "AWS at Amazon; Firebase in Azelify and DidiServices" },
   { group: "Auth & security", items: ["Sessions", "Cookies & SameSite", "JWT", "Two-person review", "WAF tuning"], proof: "Two years on Amazon sign-in and sessions" },
   { group: "Mobile", items: ["React Native", "iOS", "Android", "GraphQL", "Accessibility"], proof: "A to Z sign-in, rebuilt in React Native" },
   { group: "Data", items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB", "Drizzle", "Prisma"], proof: "Schemas for Azelify, Exva and Loctelli" },
@@ -282,7 +283,7 @@ export const featuredProjects: Project[] = [
     kind: "AI video editor",
     summary:
       "An AI video editor you direct by talking to it. Describe a short-form video or hand it a reference, and it plans the shots, builds them as editable clips on a real timeline, writes the caption, and publishes to TikTok, Instagram and YouTube.",
-    stack: ["React 19", "Vite", "TanStack Router", "Bun", "Hono", "PostgreSQL", "Drizzle", "Stripe"],
+    stack: ["React 19", "Vite", "TanStack Router", "Bun", "Hono", "PostgreSQL", "Drizzle", "Firebase", "Stripe"],
     status: "In development · private",
     flow: ["Prompt or reference", "Shot plan", "Editable timeline", "Render", "Publish"],
   },

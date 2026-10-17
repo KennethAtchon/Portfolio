@@ -310,7 +310,7 @@ document supports; they were removed (2026-10-17).
 The résumé's source of truth is Ken's Overleaf project:
 https://www.overleaf.com/project/6402857541203dfd475eb084. Its compiled PDF is published at
 https://atchonk.netlify.app/Kenneth-Atchon-Resume.pdf. Titles and dates in this file were checked against
-Ken's LinkedIn on 2026-10-17 (Amazon SDE since Nov 2024; DataAnnotation Jun 2023 – Oct 2024).
+Ken's LinkedIn on 2026-10-17 (Amazon SDE since Nov 2024; DataAnnotation Jun 2023 – Oct 2024). The step-by-step update process is in RESUME.md.
 
 ## Key Highlights & Strengths
 
