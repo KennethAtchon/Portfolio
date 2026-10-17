@@ -1,27 +1,23 @@
+import { About, Experience, Toolbox } from "@/components/about"
 import { Contact } from "@/components/contact"
-import { Experience } from "@/components/experience"
-import { Footer } from "@/components/footer"
 import { Hero } from "@/components/hero"
-import { Nav } from "@/components/nav"
-import { Projects } from "@/components/projects"
-import { Spotlight } from "@/components/spotlight"
-import { Toolbox } from "@/components/toolbox"
-import { WorkExplorer } from "@/components/work-explorer"
+import { SelectedWork } from "@/components/selected-work"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 
 export default function Home() {
   return (
-    <>
-      <Nav />
-      <Spotlight />
+    <div id="top">
+      <SiteHeader />
       <main>
         <Hero />
-        <WorkExplorer />
+        <SelectedWork />
+        <About />
         <Experience />
         <Toolbox />
-        <Projects />
         <Contact />
       </main>
-      <Footer />
-    </>
+      <SiteFooter />
+    </div>
   )
 }

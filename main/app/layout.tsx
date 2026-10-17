@@ -1,20 +1,12 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import localFont from "next/font/local"
+import { Geist_Mono, Inter, Newsreader } from "next/font/google"
 import { person } from "@/data/profile"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "swap" })
+const newsreader = Newsreader({ subsets: ["latin"], axes: ["opsz"], variable: "--font-newsreader", display: "swap" })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
 const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" })
-const cabinet = localFont({
-  src: [
-    { path: "./fonts/CabinetGrotesk-Bold.woff2", weight: "700" },
-    { path: "./fonts/CabinetGrotesk-Extrabold.woff2", weight: "800" },
-  ],
-  variable: "--font-cabinet",
-  display: "swap",
-})
 
 const description =
   "Kenneth Atchon is a software engineer at Amazon working on web platform, authentication and mobile: CloudFront and Lambda@Edge, cross-site sessions, Module Federation performance and React Native."
@@ -59,13 +51,13 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0b0c0f",
-  colorScheme: "dark",
+  themeColor: "#fbf9f1",
+  colorScheme: "light",
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable} ${geistMono.variable} ${cabinet.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${inter.variable} ${geistMono.variable}`}>
       <body>{children}</body>
     </html>
   )

@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { ArrowLeft } from "lucide-react"
 import { PrintButton } from "@/app/resume/print-button"
-import { btn } from "@/components/ui"
 import { certificates, education, person, resume, roles, toolbox } from "@/data/profile"
 
 export const metadata: Metadata = {
@@ -21,17 +20,17 @@ export default function ResumePage() {
   return (
     <div className="min-h-screen py-6 print:p-0 md:py-10">
       <div className="mx-auto mb-5 flex max-w-[8.5in] flex-wrap items-center justify-between gap-3 px-4 print:hidden">
-        <a href="/" className={btn.small}>
-          <ArrowLeft className="size-3.5 text-fg-3" aria-hidden />
+        <a href="/" className="caps inline-flex items-center gap-2 text-[10.5px] text-ink-3 hover:text-blue">
+          <ArrowLeft className="size-3.5" aria-hidden />
           Back to the site
         </a>
         <PrintButton />
       </div>
 
-      <article className="mx-auto w-full max-w-[8.5in] rounded-[4px] bg-[#fffdf8] px-[0.5in] py-[0.4in] text-[9pt] leading-[1.32] text-[#1a1a1a] shadow-[0_30px_80px_-20px_rgb(0_0_0/0.7)] print:max-w-none print:rounded-none print:shadow-none">
+      <article className="mx-auto w-full max-w-[8.5in] rounded-[4px] bg-[#fffdf8] px-[0.5in] py-[0.38in] text-[9pt] leading-[1.29] text-[#1a1a1a] shadow-[0_30px_80px_-20px_rgb(0_0_0/0.7)] print:max-w-none print:rounded-none print:shadow-none">
         <header className="flex flex-wrap items-end justify-between gap-x-6 gap-y-1 border-b-2 border-[#1a1a1a] pb-2">
           <div>
-            <h1 className="font-display text-[24pt] font-extrabold leading-none tracking-[-0.01em]">{person.name}</h1>
+            <h1 className="font-serif text-[26pt] font-[450] leading-none tracking-[-0.02em]">{person.name}</h1>
             <p className="mt-1.5 text-[10.5pt] font-semibold">Software Engineer · Web platform, authentication and mobile</p>
           </div>
           <p className="font-mono text-[7.5pt] text-[#55524c]">{person.location}</p>
@@ -58,7 +57,7 @@ export default function ResumePage() {
                 {r.start} – {r.end}
               </p>
             </div>
-            <ul className="mt-0.5 list-disc space-y-0.5 pl-4 marker:text-[#c93a08]">
+            <ul className="mt-0.5 list-disc space-y-0.5 pl-4 marker:text-[#0b3cb6]">
               {r.points.map((p) => (
                 <li key={p}>{p}</li>
               ))}

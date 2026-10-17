@@ -1,13 +1,12 @@
 "use client"
 
 import { Download } from "lucide-react"
-import { btn } from "@/components/ui"
 
 export function PrintButton() {
   return (
-    <button type="button" onClick={() => window.print()} className={btn.small}>
-      <Download className="size-3.5 text-fg-3" aria-hidden />
+    <button type="button" onClick={() => window.print()} className="cta inline-flex text-[11.5px] tracking-[0.2em]">
       Save as PDF
+      <Download className="size-3.5" aria-hidden />
     </button>
   )
 }

@@ -1,8 +1,8 @@
 import type { CSSProperties, ReactNode } from "react"
 
 const MONO = "var(--font-geist-mono)"
-const SANS = "var(--font-geist)"
-const EMBER_WASH = "rgb(255 92 26 / 0.1)"
+const SANS = "var(--font-inter)"
+const ACCENT_WASH = "rgb(11 60 182 / 0.07)"
 
 type Tone = "default" | "ember" | "raised"
 
@@ -48,7 +48,7 @@ function Markers({ id }: { id: string }) {
 }
 
 function Box({ x, y, w, h, title, sub, tone = "default" }: { x: number; y: number; w: number; h: number; title: string; sub?: string; tone?: Tone }) {
-  const fill = tone === "ember" ? EMBER_WASH : tone === "raised" ? "var(--s3)" : "var(--s2)"
+  const fill = tone === "ember" ? ACCENT_WASH : tone === "raised" ? "var(--s3)" : "var(--s2)"
   const stroke = tone === "ember" ? "var(--ember)" : "var(--ov-md)"
   return (
     <g>
@@ -325,7 +325,7 @@ export function MigrationFigure() {
         A to Z app · React Native
       </T>
       <FeatureRow x={330} y={58} />
-      <rect className="ln" x={328} y={102} width={226} height={140} rx={10} fill={EMBER_WASH} stroke="var(--ember)" style={{ "--len": 732 } as CSSProperties} />
+      <rect className="ln" x={328} y={102} width={226} height={140} rx={10} fill={ACCENT_WASH} stroke="var(--ember)" style={{ "--len": 732 } as CSSProperties} />
       <T x={340} y={121} size={10} weight={600} fill="var(--ember-lift)">
         Sign-in package
       </T>

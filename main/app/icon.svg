@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2a2c33" />
-      <stop offset="1" stop-color="#16171c" />
-    </linearGradient>
-  </defs>
-  <rect width="32" height="32" rx="8" fill="url(#g)" />
-  <text x="16" y="21.5" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="14" font-weight="800" letter-spacing="-0.5" fill="#f2efe9">KA</text>
-  <circle cx="26" cy="6" r="2.5" fill="#ff5c1a" />
+  <rect width="32" height="32" rx="6" fill="#fbf9f1" />
+  <text x="14" y="23.5" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="21" fill="#111111">K</text>
+  <circle cx="25" cy="21.5" r="3" fill="#0b3cb6" />
 </svg>

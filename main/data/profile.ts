@@ -284,6 +284,7 @@ export const toolbox: { group: string; items: string[]; proof: string }[] = [
 ]
 
 export type Project = {
+  slug: string
   name: string
   kind: string
   summary: string
@@ -295,6 +296,7 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
+    slug: "azelify",
     name: "Azelify",
     kind: "AI video editor",
     summary:
@@ -304,6 +306,7 @@ export const featuredProjects: Project[] = [
     flow: ["Prompt or reference", "Shot plan", "Editable timeline", "Render", "Publish"],
   },
   {
+    slug: "exva",
     name: "Exva",
     kind: "Trading-bot desktop app",
     summary:
@@ -316,6 +319,7 @@ export const featuredProjects: Project[] = [
 
 export const otherProjects: Project[] = [
   {
+    slug: "ai-receptionist",
     name: "@atchonk/ai-receptionist",
     kind: "Open-source SDK on npm",
     summary: "A TypeScript SDK for an AI receptionist that answers calls, texts and email, books appointments and remembers returning customers.",
@@ -327,6 +331,7 @@ export const otherProjects: Project[] = [
     ],
   },
   {
+    slug: "recall",
     name: "Recall",
     kind: "Desktop learning app",
     summary: "Bite-size interactive lessons in the style of Brilliant, FSRS-5 spaced repetition, and a system-design canvas that grades the design you build.",
@@ -335,6 +340,7 @@ export const otherProjects: Project[] = [
     links: [{ label: "GitHub", href: "https://github.com/KennethAtchon/Tester" }],
   },
   {
+    slug: "second-brain",
     name: "Second Brain",
     kind: "Memory for AI coding agents",
     summary: "A Markdown knowledge base with hybrid keyword and semantic search, served over MCP to Claude Code, Codex, OpenCode and Cursor.",
@@ -342,6 +348,7 @@ export const otherProjects: Project[] = [
     status: "Daily driver · private",
   },
   {
+    slug: "loctelli",
     name: "Loctelli",
     kind: "CRM for small businesses",
     summary: "Lead tracking, bookings, and AI-assisted chat and sales strategies.",
@@ -350,6 +357,7 @@ export const otherProjects: Project[] = [
     links: [{ label: "GitHub", href: "https://github.com/KennethAtchon/Loctelli" }],
   },
   {
+    slug: "local-llm",
     name: "local-llm",
     kind: "Local inference lab",
     summary: "Running open-weight models locally on Apple silicon with llama.cpp: serving setup, benchmarks and runbooks.",
@@ -389,3 +397,90 @@ export const resume = {
     },
   ],
 }
+
+// Home page copy transcribed from the editorial mock (Swiss Editorial Software Portfolio.png).
+export const hero = {
+  headline: ["Thoughtful code.", "Meaningful products."],
+  intro: "I’m a software engineer who cares about elegant systems, impactful products, and the people who use them.",
+  cta: "See my work",
+  role: "Software engineer",
+  based: "Based in Seattle, WA",
+  tagline: "Building a more human internet",
+}
+
+export type CardImage = {
+  src: string
+  alt: string
+  /** "device" shows a real product screenshot in a tilted device frame. */
+  frame?: "device"
+  credit?: { name: string; url: string }
+}
+
+export type Card = {
+  slug: string
+  category: string
+  title: string
+  blurb: string
+  image: CardImage
+}
+
+const unsplash = (name: string, id: string) => ({ name, url: `https://unsplash.com/photos/${id}` })
+
+export const cards: Card[] = [
+  {
+    slug: "platform",
+    category: "Amazon · Platform",
+    title: "Edge Platform",
+    blurb: "A multi-tenant platform built from scratch. CloudFront, Lambda@Edge and WAF; tenants join with a code review.",
+    image: { src: "/images/seattle-dawn.webp", alt: "Seattle skyline and Mount Rainier at dawn", credit: unsplash("Andrew S", "pulhUnQfLpI") },
+  },
+  {
+    slug: "exva",
+    category: "Product · Desktop",
+    title: "Exva",
+    blurb: "Paper-trading bots that explain every decision. Receipts, backtests and live runs in one calm app.",
+    image: { src: "/images/exva-home.webp", alt: "Exva home screen in demo mode: equity chart, journal and three bots with their latest receipts", frame: "device" },
+  },
+  {
+    slug: "sessions",
+    category: "Amazon · Auth",
+    title: "Cross-Site Sessions",
+    blurb: "Signed in on one site, signed in on the next, on a web that blocks third-party cookies.",
+    image: { src: "/images/seattle-towers-fog.webp", alt: "Looking up at Seattle towers in fog", credit: unsplash("Josh Hild", "EExcDxoVtRs") },
+  },
+  {
+    slug: "federation",
+    category: "Amazon · Performance",
+    title: "Federated Frontend",
+    blurb: "A 300+ tenant micro-frontend platform that loads faster, chosen by measuring every webpack option.",
+    image: { src: "/images/misty-forest.webp", alt: "Evergreen forest in fog", credit: unsplash("Hannah Reding", "9FldvW9GQTM") },
+  },
+  {
+    slug: "react-native",
+    category: "Amazon · Mobile",
+    title: "A to Z Sign-In",
+    blurb: "Two native sign-in codebases rebuilt as one React Native package, accessible from day one.",
+    image: { src: "/images/misty-trees.webp", alt: "Tall evergreen trees emerging from mist", credit: unsplash("Roberto Shumski", "VJ5k8_oYl_4") },
+  },
+  {
+    slug: "azelify",
+    category: "Product · AI",
+    title: "Azelify",
+    blurb: "An AI video editor you direct by talking to it. Plan, edit, caption and publish in one place.",
+    image: { src: "/images/mountain-forest.webp", alt: "Misty mountains above a dense evergreen forest", credit: unsplash("Laura Chouette", "2BI0UWMXxF8") },
+  },
+  {
+    slug: "two-person",
+    category: "Amazon · Security",
+    title: "Two-Person Review",
+    blurb: "A second approval before any demo session, which opened demo mode in 13 countries.",
+    image: { src: "/images/seattle-haze.webp", alt: "Seattle skyline and the Space Needle on a hazy day", credit: unsplash("Julian Falk", "q762deczExA") },
+  },
+  {
+    slug: "alumni",
+    category: "Amazon · Launch",
+    title: "Alumni Lite",
+    blurb: "A global, feature-gated launch with email in 27 languages for people leaving or changing roles.",
+    image: { src: "/images/foggy-shore.webp", alt: "Rocky shoreline disappearing into fog", credit: unsplash("Brandon Griggs", "Y3PW7OtsmpY") },
+  },
+]
