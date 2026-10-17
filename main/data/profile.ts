@@ -38,7 +38,7 @@ export const facts: { label: string; value: string; note?: string; live?: "time"
 ]
 
 export const proof = [
-  { value: "0→1", label: "Multi-tenant platform, built from scratch" },
+  { value: "0→1", label: "Multi-tenant platform I helped build from scratch" },
   { value: "300+", label: "Tenants on a platform I made load faster" },
   { value: "13", label: "Countries unlocked for demo mode" },
   { value: "27", label: "Languages shipped in one launch" },
@@ -62,7 +62,7 @@ export type Work = {
 export const work: Work[] = [
   {
     id: "platform",
-    title: "Built a multi-tenant platform from the ground up",
+    title: "Helped build a multi-tenant platform from the ground up",
     short: "Edge architecture, WAF security and code-reviewed tenant onboarding for a new customer-facing product.",
     context:
       "A new user-facing product needed a platform that many tenants could build on without standing up their own infrastructure. It had to be fast for users everywhere, secure by default, and simple to join.",

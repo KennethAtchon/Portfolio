@@ -7,11 +7,16 @@ import { person } from "@/data/profile"
 
 export function Contact() {
   const [copied, setCopied] = useState(false)
-  const copy = () =>
-    navigator.clipboard.writeText(person.email).then(() => {
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(person.email)
       setCopied(true)
       setTimeout(() => setCopied(false), 1800)
-    })
+    } catch {
+      // Clipboard blocked or unavailable: open the mail client instead.
+      window.location.href = `mailto:${person.email}`
+    }
+  }
 
   return (
     <Container id="contact" className="pt-28 md:pt-36">

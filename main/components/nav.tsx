@@ -73,7 +73,7 @@ export function Nav() {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              aria-label="Open menu"
+              aria-label="Open command menu"
               className="lit grid size-8 place-items-center rounded-field text-fg-2 transition-transform active:scale-[0.97] md:hidden"
             >
               <Menu className="size-4" />

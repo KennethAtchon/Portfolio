@@ -73,12 +73,14 @@ export function CommandPalette({ open, onClose, onToast }: { open: boolean; onCl
     if (!open) return
     setQuery("")
     setIndex(0)
+    const opener = document.activeElement as HTMLElement | null
     const frame = requestAnimationFrame(() => inputRef.current?.focus())
     const overflow = document.body.style.overflow
     document.body.style.overflow = "hidden"
     return () => {
       cancelAnimationFrame(frame)
       document.body.style.overflow = overflow
+      opener?.focus({ preventScroll: true })
     }
   }, [open])
 
@@ -99,13 +101,23 @@ export function CommandPalette({ open, onClose, onToast }: { open: boolean; onCl
     } else if (e.key === "Escape") {
       e.preventDefault()
       onClose()
+    } else if (e.key === "Tab") {
+      // Commands are reached with the arrow keys, so focus stays on the search field.
+      e.preventDefault()
+      inputRef.current?.focus()
     }
   }
 
   let row = -1
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Command menu" onKeyDown={onKeyDown}>
-      <button type="button" aria-label="Close command menu" onClick={onClose} className="scrim-in absolute inset-0 bg-black/55 backdrop-blur-[3px]" />
+      <button
+        type="button"
+        tabIndex={-1}
+        aria-label="Close command menu"
+        onClick={onClose}
+        className="scrim-in absolute inset-0 bg-black/55 backdrop-blur-[3px]"
+      />
       <div className="palette-in relative mx-auto mt-[12vh] w-[min(560px,calc(100%-1.5rem))] overflow-hidden rounded-float bg-s3 shadow-float">
         <div className="flex h-14 items-center gap-3 border-b border-line px-4">
           <Search className="size-4 text-fg-3" aria-hidden />
@@ -115,19 +127,25 @@ export function CommandPalette({ open, onClose, onToast }: { open: boolean; onCl
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Jump to a section or run an action…"
             aria-label="Search commands"
+            role="combobox"
+            aria-expanded="true"
+            aria-controls="cmd-list"
+            aria-autocomplete="list"
             aria-activedescendant={results[index] ? `cmd-${results[index].id}` : undefined}
             className="h-full flex-1 bg-transparent text-[0.9375rem] text-fg outline-none placeholder:text-fg-3"
           />
           <Kbd>esc</Kbd>
         </div>
-        <div role="listbox" aria-label="Commands" className="max-h-[52vh] overflow-y-auto p-2">
-          {results.length === 0 && <p className="px-3 py-6 text-center text-sm text-fg-3">Nothing matches “{query}”.</p>}
+        {results.length === 0 && <p className="px-3 py-6 text-center text-sm text-fg-3">Nothing matches “{query}”.</p>}
+        <div id="cmd-list" role="listbox" aria-label="Commands" className="max-h-[52vh] overflow-y-auto p-2 empty:hidden">
           {(["Jump to", "Actions"] as const).map((group) => {
             const items = results.filter((c) => c.group === group)
             if (!items.length) return null
             return (
-              <div key={group} className="pb-1">
-                <p className="eyebrow px-3 pb-1.5 pt-2">{group}</p>
+              <div key={group} role="group" aria-label={group} className="pb-1">
+                <p aria-hidden="true" className="eyebrow px-3 pb-1.5 pt-2">
+                  {group}
+                </p>
                 {items.map((c) => {
                   row += 1
                   const i = row
@@ -139,6 +157,7 @@ export function CommandPalette({ open, onClose, onToast }: { open: boolean; onCl
                       id={`cmd-${c.id}`}
                       role="option"
                       aria-selected={active}
+                      tabIndex={-1}
                       type="button"
                       onMouseMove={() => setIndex(i)}
                       onClick={c.run}

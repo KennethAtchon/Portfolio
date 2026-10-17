@@ -39,7 +39,7 @@ export default function ResumePage() {
         <p className="mt-2 flex flex-wrap gap-x-3 gap-y-0.5 font-mono text-[7.5pt] text-[#55524c]">
           <a href={`mailto:${person.email}`}>{person.email}</a>
           <span>{person.phone}</span>
-          <a href={person.links.linkedin}>linkedin.com/in/kenneth-atchon</a>
+          <a href={person.links.linkedin}>linkedin.com/in/kenneth-atchon-488b81214</a>
           <a href={person.links.github}>github.com/KennethAtchon</a>
           <a href={person.site}>atchonk.netlify.app</a>
         </p>
