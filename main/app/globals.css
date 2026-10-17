@@ -129,13 +129,3 @@
     scroll-behavior: auto;
   }
 }
-
-@media print {
-  @page {
-    size: letter;
-    margin: 0;
-  }
-  body {
-    background: #fffdf8;
-  }
-}

@@ -1,6 +1,8 @@
-// Every word on the site and the /resume page comes from here.
-// Sources: Ken's résumé PDF (pre-Amazon roles, certificates), KENNETH_ATCHON_INFO.md and Ken's own
-// descriptions of his Amazon work, and the READMEs of the repos listed under `projects`.
+// Every word on the site comes from here.
+// The résumé PDF (public/Kenneth-Atchon-Resume.pdf) is compiled from Ken's Overleaf project, its source of
+// truth: https://www.overleaf.com/project/6402857541203dfd475eb084. `roles` and `education` mirror it word
+// for word, so change them together. Titles and dates were checked against Ken's LinkedIn on 2026-10-17.
+// Other sources: KENNETH_ATCHON_INFO.md, Ken's own descriptions of his Amazon work, and the repo READMEs.
 
 export const person = {
   name: "Kenneth Atchon",
@@ -8,7 +10,7 @@ export const person = {
   last: "Atchon",
   initials: "KA",
   role: "Software Engineer",
-  title: "Software Developer I",
+  title: "Software Development Engineer",
   company: "Amazon",
   location: "Seattle, WA",
   timeZone: "America/Los_Angeles",
@@ -17,6 +19,7 @@ export const person = {
   email: "katchon.career@gmail.com",
   phone: "+1 (219) 386-6604",
   site: "https://atchonk.netlify.app",
+  resume: "/Kenneth-Atchon-Resume.pdf",
   links: {
     github: "https://github.com/KennethAtchon",
     linkedin: "https://www.linkedin.com/in/kenneth-atchon-488b81214/",
@@ -113,14 +116,14 @@ export const work: Work[] = [
     context:
       "A to Z is the app Amazon associates use to manage their work. Most of it already ran on React Native, but sign-in was still two native codebases, Swift / Objective-C and Java, so every change was built twice and kept in sync by hand.",
     did: [
-      "Rebuilt 8+ authentication screens from Figma and the legacy designs, accessible from day one: screen-reader labels throughout and layouts that hold up at every screen size.",
+      "Rebuilt 8 authentication screens from Figma and the legacy designs, accessible from day one: screen-reader labels throughout and layouts that hold up at every screen size.",
       "Implemented the shared React Context state, session expiration, a demo mode for app testers, and a new logging system.",
       "Migrated 100+ metrics from the native apps and removed the redundant ones along the way.",
     ],
     outcome:
       "One codebase instead of two. Sign-in changes take about half the development time, and the login flow now matches the rest of the modernized app.",
     metrics: [
-      { value: "8+", label: "screens rebuilt" },
+      { value: "8", label: "screens rebuilt" },
       { value: "100+", label: "metrics migrated" },
       { value: "½", label: "dev time per change" },
     ],
@@ -185,16 +188,19 @@ export const roles: Role[] = [
   {
     start: "Nov 2024",
     end: "Present",
-    title: "Software Developer I",
+    title: "Software Development Engineer",
     org: "Amazon",
     place: "Seattle, WA",
     current: true,
     points: [
-      "Helped build a multi-tenant, customer-facing platform from scratch on CloudFront, Lambda@Edge and a reverse proxy; chose the AWS WAF rules and rolled them out in count mode.",
-      "Designed cross-domain session linking that works as browsers block third-party cookies, pairing an iframe cookie handoff with backend account linking.",
-      "Made a 300+ tenant Module Federation platform load faster by consolidating webpack chunks, with every configuration benchmarked in Playwright.",
-      "Rebuilt A to Z’s iOS and Android sign-in in React Native: 8+ accessible screens and 100+ metrics, at half the development time per change.",
-      "Unlocked demo mode in 13 countries with a two-person review flow, and launched Alumni Lite globally in 27 languages.",
+      "Leading low-level design of a new external-facing web platform, built from scratch on CloudFront, Lambda@Edge, AWS WAF and a reverse proxy, for a 40x traffic scale-out; chose the WAF rules and ran them in count mode to tune on live traffic, and made tenant onboarding a code-reviewed change.",
+      "Kept users signed in across domains without third-party cookies: paired a client-side iframe cookie handoff and redirect with backend account-ID linking and an async session tie on landing, after a deep study of SameSite and storage partitioning.",
+      "Cut page-load latency on a 300+ tenant webpack Module Federation micro-frontend platform by consolidating chunks to remove extra requests; mapped share-key resolution and benchmarked every configuration in Playwright, shipping only options proven safe.",
+      "Drove dark-mode theming across 89 tenants; designed a Lambda@Edge cookie rotation that cut theme propagation from 15 minutes to seconds and raised CloudFront cache hits from 8% to 9.3%; root-caused a cross-tenant CSS bleed in a legacy Ruby asset gem.",
+      "Migrated Amazon A to Z employee sign-in (hundreds of thousands of users) from native iOS/Android to React Native; owned 8 accessible auth screens and a typed wrapper for 100+ metrics; 4x faster releases.",
+      "Architected a two-person review (2PR) authorization workflow as an isolated package, choosing polling over push and WebSockets; closed the security finding that blocked rollout to the US and 12 EU countries.",
+      "Delivered identity internationalization for a 59-country expansion: email templates in 27 languages (108 files), per-country feature gates and SES delivery proofs, with zero launch incidents.",
+      "Primary on-call for SEV-2 incidents; authored 211 code reviews across 46 packages, reviewed 465+ from 30+ engineers, ran 18 production deployments, and led Secrets Manager remediation for 25+ tenants.",
     ],
   },
   {
@@ -204,26 +210,22 @@ export const roles: Role[] = [
     org: "Prognostic Optimization Group",
     place: "Remote",
     points: [
-      "Turned Figma designs into a responsive React and Tailwind CSS site that works from phones to desktops.",
-      "Designed the PostgreSQL schema and Flask + SQLAlchemy data layer behind the product’s analytics.",
-      "Implemented JWT-based sign-in and session management.",
+      "Built a responsive marketing site from Figma designs in React and Tailwind CSS, increasing mobile traffic.",
+      "Designed the PostgreSQL schema and SQLAlchemy data layer for a Flask backend; added JWT auth.",
     ],
   },
   {
     start: "Jun 2023",
-    end: "Nov 2024",
+    end: "Oct 2024",
     title: "Software Developer, AI Trainer",
     org: "DataAnnotation",
     place: "Remote · contract",
-    points: [
-      "Evaluated and rewrote LLM-generated backend and data-visualization code, grading model output to improve its coding ability.",
-      "Built a fast code-review eye: finding the subtle bug in plausible-looking code.",
-    ],
+    points: ["Evaluated and refined LLM-generated backend and data-visualization code for correctness and quality."],
   },
   {
     start: "May 2023",
     end: "Aug 2023",
-    title: "DevOps Engineer Intern",
+    title: "Cloud Administrator Intern",
     org: "Arpa-Cloud",
     place: "Remote",
     points: [
@@ -235,7 +237,7 @@ export const roles: Role[] = [
 
 export const education = {
   degree: "B.S. Computer Science",
-  school: "Purdue University Calumet",
+  school: "Purdue University Northwest",
   place: "Hammond, IN",
   start: "Aug 2021",
   end: "May 2024",
@@ -354,28 +356,6 @@ export const archive = [
   { name: "Unital", href: "https://github.com/KennethAtchon/Unital" },
   { name: "Bug Tracker", href: "https://github.com/KennethAtchon/Bug-Tracker" },
 ]
-
-export const resume = {
-  summary:
-    "Software engineer with two years at Amazon across web platform, authentication and mobile: helped build a multi-tenant platform on CloudFront and Lambda@Edge, designed cross-domain session linking, sped up a 300+ tenant Module Federation platform, and rebuilt A to Z’s sign-in in React Native. Builds AI products end to end in TypeScript. U.S. citizen.",
-  projects: [
-    {
-      name: "Azelify",
-      line: "AI video editor in development: turns a prompt or reference into a shot plan, editable timeline clips and captions, then publishes to TikTok, Instagram and YouTube.",
-      stack: "React 19, Bun, Hono, PostgreSQL, Drizzle",
-    },
-    {
-      name: "Exva",
-      line: "Desktop app running paper-trading bots 24/7, logging a receipt with the numbers behind every decision; backtests run the live trading code.",
-      stack: "Electron, React, TypeScript, SQLite",
-    },
-    {
-      name: "@atchonk/ai-receptionist",
-      line: "Open-source TypeScript SDK on npm for an AI agent that answers calls, texts and email and books appointments.",
-      stack: "TypeScript, Twilio, OpenAI",
-    },
-  ],
-}
 
 // Home page copy transcribed from the editorial mock (Swiss Editorial Software Portfolio.png).
 export const hero = {

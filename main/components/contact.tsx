@@ -7,7 +7,7 @@ const mailto = `mailto:${person.email}?subject=${encodeURIComponent("Software en
 export function Contact() {
   const links = [
     { label: "Email Kenneth", href: mailto },
-    { label: "View résumé", href: "/resume" },
+    { label: "View résumé", href: person.resume },
     { label: "LinkedIn", href: person.links.linkedin },
     { label: "GitHub", href: person.links.github },
   ]
@@ -30,7 +30,7 @@ export function Contact() {
           <ul className="mt-10 flex flex-wrap gap-x-10 gap-y-6">
             {links.map((l) => (
               <li key={l.label}>
-                <a href={l.href} target={l.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="cta inline-flex text-[12px] tracking-[0.22em]">
+                <a href={l.href} target={l.href.startsWith("mailto:") ? undefined : "_blank"} rel="noreferrer" className="cta inline-flex text-[12px] tracking-[0.22em]">
                   {l.label}
                   <Arrow />
                 </a>

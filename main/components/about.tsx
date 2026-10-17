@@ -21,9 +21,9 @@ export function About() {
             sign-in, sessions, edge infrastructure and how fast a page loads.
           </p>
           <p className="mt-8 max-w-[62ch] text-pretty text-[19px] leading-[1.55] text-ink-2">
-            Before Amazon I studied computer science at Purdue University Calumet, graduating with a 3.87 GPA and high honors, built Azure
-            networks as a DevOps intern, and evaluated LLM-generated code for DataAnnotation. On my own time I build AI-native products,
-            from a video editor you direct by talking to it to a desktop app that runs trading bots and explains every decision.
+            Before Amazon I studied computer science at Purdue University Northwest, graduating with a 3.87 GPA and high honors, built
+            Azure networks as a cloud administrator intern, and evaluated LLM-generated code for DataAnnotation. On my own time I build
+            AI-native products, from a video editor you direct by talking to it to a desktop app that runs trading bots and explains every decision.
           </p>
         </div>
         <div className="lg:col-span-4">
@@ -35,7 +35,7 @@ export function About() {
               </div>
             ))}
           </dl>
-          <a href="/resume" className="cta inline-flex mt-10 text-[12.5px] tracking-[0.24em]">
+          <a href={person.resume} target="_blank" rel="noreferrer" className="cta inline-flex mt-10 text-[12.5px] tracking-[0.24em]">
             View résumé
             <Arrow />
           </a>

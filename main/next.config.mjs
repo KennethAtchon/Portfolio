@@ -3,9 +3,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // The old static PDF résumé is replaced by the printable /resume page.
+  // The résumé is a PDF compiled from Ken's Overleaf project. Older links (/Resume.pdf, which an earlier
+  // deploy sent to /resume with a cached 308, and the retired /resume page) land on it.
   async redirects() {
-    return [{ source: "/Resume.pdf", destination: "/resume", permanent: true }]
+    return [
+      { source: "/resume", destination: "/Kenneth-Atchon-Resume.pdf", permanent: false },
+      { source: "/Resume.pdf", destination: "/Kenneth-Atchon-Resume.pdf", permanent: false },
+    ]
   },
 }
 

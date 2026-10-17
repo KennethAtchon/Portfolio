@@ -25,7 +25,7 @@
 
 ## Current Position
 
-**Software Developer I** at **Amazon**
+**Software Development Engineer** at **Amazon**
 - **Location**: Seattle, WA
 - **Start Date**: November 2024
 - **Status**: Present
@@ -43,7 +43,7 @@
 
 ## Work Experience
 
-### Software Developer I - Amazon
+### Software Development Engineer - Amazon
 **Period**: November 2024 - Present  
 **Location**: Seattle, WA
 
@@ -92,14 +92,14 @@ The issue was kiosk machines were authenticating using Kerberos. We owned the At
 
 The solution was rejected in favor of just migrating away from Kerberos authentication.
 
-### Full Stack Developer Intern - Prognostic Optimization Group
+### Software Engineer Intern - Prognostic Optimization Group
 **Period**: May 2024 – August 2024  
 **Location**: Remote
 
 Transformed Figma designs into responsive websites ensuring smooth user experience across devices through precise implementation and testing. Developed robust PostgreSQL database with advanced analytics, enhancing user insights and site performance. Sharpened skills in both front-end development and database management. Implemented precise testing and optimization strategies.
 
 ### Software Developer - AI Trainer - DataAnnotation.tech
-**Period**: June 2023 – November 2024  
+**Period**: June 2023 – October 2024  
 **Location**: Remote
 
 In this freelancing role, chose tasks that matched interests, primarily focusing on evaluating and grading the performance of AI systems to enhance their coding capabilities. Provided detailed and nuanced feedback, which significantly improved AI accuracy and reliability. This experience also allowed for developing strong code review and comprehension skills. Evaluated and graded AI system performance to enhance coding capabilities. Provided detailed feedback improving AI accuracy and reliability while developing strong code review skills.
@@ -113,7 +113,7 @@ Supported senior Azure admins in developing and maintaining private and hybrid c
 ## Education
 
 **Bachelor of Science in Computer Science**  
-**Purdue University Calumet**  
+**Purdue University Northwest**  
 **Location**: Hammond, IN  
 **Period**: 2021 - 2024  
 **GPA**: 3.87 (Magna Cum Laude / High Honors)
@@ -122,11 +122,11 @@ Graduated with high honors (GPA: 3.87) in Computer Science, completing a curricu
 
 ## About Me
 
-I'm Kenneth Atchon, a Software Engineer with expertise in full-stack web development, mobile development, and cloud-based solutions. With a Bachelor's degree in Computer Science from Purdue University Calumet, I've developed and deployed dynamic web applications using React JS, React Native, AWS, MySQL, and MongoDB.
+I'm Kenneth Atchon, a Software Engineer with expertise in full-stack web development, mobile development, and cloud-based solutions. With a Bachelor's degree in Computer Science from Purdue University Northwest, I've developed and deployed dynamic web applications using React JS, React Native, AWS, MySQL, and MongoDB.
 
 My experience includes improving AI training datasets, transforming Figma designs into responsive websites, and optimizing cloud infrastructures. I'm passionate about leveraging technology to solve complex problems, continuously learning, and delivering high-quality solutions that drive user engagement and efficiency.
 
-As a Software Developer I at Amazon, I work on the authentication team for the AtoZ app, a public-facing internal application. I contribute significantly to React Native migration projects and develop cross-platform mobile applications using React Native, Objective-C/Swift, and Java. I've learned and implemented GraphQL for mobile application data fetching and API integration. I work on building scalable mobile solutions that impact millions of users worldwide across iOS and Android platforms, while handling various development tasks as needed.
+As a Software Development Engineer at Amazon, I work on the authentication team for the AtoZ app, a public-facing internal application. I contribute significantly to React Native migration projects and develop cross-platform mobile applications using React Native, Objective-C/Swift, and Java. I've learned and implemented GraphQL for mobile application data fetching and API integration. I work on building scalable mobile solutions that impact millions of users worldwide across iOS and Android platforms, while handling various development tasks as needed.
 
 ## Technical Skills
 
@@ -301,8 +301,16 @@ I develop immersive games with captivating graphics and smooth performance from 
 - Microsoft Azure Administrator Associate (June 2023)
 - Microsoft Azure Data Fundamentals (July 2023)
 
-These two are the certificates on the résumé PDF. Earlier versions of this file listed an AWS Certified
-Developer and a MongoDB certification that no source document supports; they were removed (2026-10-17).
+Earned in 2023 (the Administrator Associate needs a yearly renewal). The current résumé leaves them off.
+Earlier versions of this file listed an AWS Certified Developer and a MongoDB certification that no source
+document supports; they were removed (2026-10-17).
+
+## Résumé
+
+The résumé's source of truth is Ken's Overleaf project:
+https://www.overleaf.com/project/6402857541203dfd475eb084. Its compiled PDF is published at
+https://atchonk.netlify.app/Kenneth-Atchon-Resume.pdf. Titles and dates in this file were checked against
+Ken's LinkedIn on 2026-10-17 (Amazon SDE since Nov 2024; DataAnnotation Jun 2023 – Oct 2024).
 
 ## Key Highlights & Strengths
 
